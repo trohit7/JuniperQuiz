@@ -1,0 +1,2 @@
+# JuniperQuiz
+Internship Practice application
