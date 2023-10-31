@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- juniper_v1_quizquestion.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

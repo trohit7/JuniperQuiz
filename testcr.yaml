@@ -1,0 +1,7 @@
+apiVersion: juniper.juniper.com/v1
+kind: QuizQuestion
+metadata:
+  name: example-quiz
+spec:
+  question: "What is the name of Ironman ?"
+  answer: "rohitohit.sr"

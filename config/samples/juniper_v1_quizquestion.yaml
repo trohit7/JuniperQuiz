@@ -1,0 +1,13 @@
+apiVersion: juniper.juniper.com/v1
+kind: QuizQuestion
+metadata:
+  labels:
+    app.kubernetes.io/name: quizquestion
+    app.kubernetes.io/instance: quizquestion-sample
+    app.kubernetes.io/part-of: quiztestcc
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: quiztestcc
+  name: quizquestion-sample
+spec:
+  question: "what is captail of bharat"
+  answer: "Delhi"
