@@ -9,4 +9,4 @@ spec:
   holderIdentity: quiztestcc-controller-manager-65bff94cdf-bh4g5_ff6dc872-a54d-4c6d-8891-e602f37ec54a
   leaseDurationSeconds: 15
   leaseTransitions: 24
-  renewTime: "2023-11-02T05:18:23.666415Z"
+  renewTime: "2023-11-02T05:18:33.707789Z"
