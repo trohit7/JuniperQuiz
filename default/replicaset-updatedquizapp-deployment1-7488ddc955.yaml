@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "2"
+    deployment.kubernetes.io/max-replicas: "3"
+    deployment.kubernetes.io/revision: "2"
+  creationTimestamp: "2023-10-12T08:21:56Z"
+  labels:
+    app: updatedquizapp1
+    pod-template-hash: 7488ddc955
+  name: updatedquizapp-deployment1-7488ddc955
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: updatedquizapp-deployment1
+    uid: bf07e6e2-53c1-49dc-886e-82c967ae5e55
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: updatedquizapp1
+      pod-template-hash: 7488ddc955
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: updatedquizapp1
+        pod-template-hash: 7488ddc955
+    spec:
+      containers:
+      - command:
+        - /bin/bash
+        envFrom:
+        - configMapRef:
+            name: example-quiz-configmap
+        image: trohit7/updatedquiz3:test3
+        imagePullPolicy: IfNotPresent
+        name: updatedquizapp1
+        ports:
+        - containerPort: 80
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        tty: true
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: quiz-app-service-account
+      serviceAccountName: quiz-app-service-account
+      terminationGracePeriodSeconds: 30
