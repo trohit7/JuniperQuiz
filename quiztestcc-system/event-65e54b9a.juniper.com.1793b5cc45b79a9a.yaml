@@ -1,0 +1,24 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-11-02T05:02:53Z"
+deprecatedLastTimestamp: "2023-11-02T05:02:53Z"
+deprecatedSource:
+  component: quiztestcc-controller-manager-65bff94cdf-bh4g5_ff6dc872-a54d-4c6d-8891-e602f37ec54a
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-11-02T05:02:53Z"
+  name: 65e54b9a.juniper.com.1793b5cc45b79a9a
+  namespace: quiztestcc-system
+note: quiztestcc-controller-manager-65bff94cdf-bh4g5_ff6dc872-a54d-4c6d-8891-e602f37ec54a
+  became leader
+reason: LeaderElection
+regarding:
+  apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  name: 65e54b9a.juniper.com
+  namespace: quiztestcc-system
+  resourceVersion: "373751"
+  uid: 05edaddb-aba5-43a4-b088-ca1540004566
+reportingController: quiztestcc-controller-manager-65bff94cdf-bh4g5_ff6dc872-a54d-4c6d-8891-e602f37ec54a
+type: Normal

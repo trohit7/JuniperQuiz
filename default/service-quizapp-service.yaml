@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"quizapp-service","namespace":"default"},"spec":{"ports":[{"port":80,"protocol":"TCP","targetPort":80}],"selector":{"app":"quizapp"},"type":"NodePort"}}
+  creationTimestamp: "2023-09-27T16:45:49Z"
+  name: quizapp-service
+  namespace: default
+spec:
+  clusterIP: 10.99.81.54
+  clusterIPs:
+  - 10.99.81.54
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 31515
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: quizapp
+  sessionAffinity: None
+  type: NodePort

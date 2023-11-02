@@ -1,0 +1,74 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.244.0.202
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: minikube
+  targetRef:
+    kind: Pod
+    name: quizapp-deployment-567b8b576d-rxjzm
+    namespace: default
+    uid: 79fea33a-6a1d-41a8-8681-a98c68450e77
+- addresses:
+  - 10.244.0.194
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: minikube
+  targetRef:
+    kind: Pod
+    name: quizapp-567b8b576d-zr2wc
+    namespace: default
+    uid: 48e891d9-a027-4916-82ff-085a79e435b5
+- addresses:
+  - 10.244.0.192
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: minikube
+  targetRef:
+    kind: Pod
+    name: quizapp-deployment-567b8b576d-dpllq
+    namespace: default
+    uid: 210523ad-b33a-4f6e-a775-1d21712e68ca
+- addresses:
+  - 10.244.0.199
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: minikube
+  targetRef:
+    kind: Pod
+    name: quizapp-567b8b576d-p2px5
+    namespace: default
+    uid: 256a4a6b-15d3-4e51-a1b5-73cc4b3d83fc
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-10-03T06:17:49Z"
+  creationTimestamp: "2023-10-03T06:17:49Z"
+  generateName: quizapp-
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    kubernetes.io/service-name: quizapp
+  name: quizapp-4559c
+  namespace: default
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: quizapp
+    uid: 72c287d2-ac7b-4810-a8b1-41a990a600f3
+ports:
+- name: ""
+  port: 80
+  protocol: TCP

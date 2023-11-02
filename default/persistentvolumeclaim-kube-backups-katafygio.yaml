@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    meta.helm.sh/release-name: kube-backups
+    meta.helm.sh/release-namespace: default
+    pv.kubernetes.io/bind-completed: "yes"
+    pv.kubernetes.io/bound-by-controller: "yes"
+    volume.beta.kubernetes.io/storage-provisioner: k8s.io/minikube-hostpath
+    volume.kubernetes.io/storage-provisioner: k8s.io/minikube-hostpath
+  creationTimestamp: "2023-10-30T04:59:09Z"
+  finalizers:
+  - kubernetes.io/pvc-protection
+  labels:
+    app: katafygio
+    app.kubernetes.io/managed-by: Helm
+    chart: katafygio-0.5.1
+    heritage: Helm
+    release: kube-backups
+  name: kube-backups-katafygio
+  namespace: default
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: standard
+  volumeMode: Filesystem
+  volumeName: pvc-657ed381-35e1-4294-9f9e-2378a4c76f37

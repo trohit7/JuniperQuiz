@@ -1,0 +1,22 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 4
+deprecatedFirstTimestamp: "2023-10-30T14:51:41Z"
+deprecatedLastTimestamp: "2023-10-31T12:39:32Z"
+deprecatedSource:
+  component: node-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-10-31T12:39:32Z"
+  name: quizapp-deployment-567b8b576d-dpllq.1792ea3012c69473
+  namespace: default
+note: Node is not ready
+reason: NodeNotReady
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: quizapp-deployment-567b8b576d-dpllq
+  namespace: default
+  resourceVersion: "368926"
+  uid: 210523ad-b33a-4f6e-a775-1d21712e68ca
+type: Warning

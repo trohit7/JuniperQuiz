@@ -1,0 +1,24 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-11-02T05:02:21Z"
+deprecatedLastTimestamp: "2023-11-02T05:02:21Z"
+deprecatedSource:
+  component: kubelet
+  host: minikube
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-11-02T05:02:28Z"
+  name: kube-scheduler-minikube.1793b5c4ec544406
+  namespace: kube-system
+note: Container image "registry.k8s.io/kube-scheduler:v1.27.4" already present on
+  machine
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-scheduler}
+  kind: Pod
+  name: kube-scheduler-minikube
+  namespace: kube-system
+  uid: eb675835e10503c79265cf0e2983f93c
+type: Normal

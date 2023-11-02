@@ -1,0 +1,15 @@
+apiVersion: v1
+data:
+  config.yaml: |
+    storage:
+      type: local
+      local:
+        directory: /katafygio-data
+    retention_policy:
+      enabled: true
+      max_age: 30d
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-10-30T12:09:31Z"
+  name: katafygio-config
+  namespace: default

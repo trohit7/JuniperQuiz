@@ -1,0 +1,22 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 4
+deprecatedFirstTimestamp: "2023-10-30T14:51:41Z"
+deprecatedLastTimestamp: "2023-10-31T12:39:32Z"
+deprecatedSource:
+  component: node-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-10-31T12:39:32Z"
+  name: kube-scheduler-minikube.1792ea301898c452
+  namespace: kube-system
+note: Node is not ready
+reason: NodeNotReady
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: kube-scheduler-minikube
+  namespace: kube-system
+  resourceVersion: "368977"
+  uid: c8015906-ccde-4581-8325-6c080cf1e544
+type: Warning

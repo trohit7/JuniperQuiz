@@ -1,0 +1,24 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-11-02T05:02:21Z"
+deprecatedLastTimestamp: "2023-11-02T05:02:21Z"
+deprecatedSource:
+  component: kubelet
+  host: minikube
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-11-02T05:02:28Z"
+  name: kube-apiserver-minikube.1793b5c4ec5c9c15
+  namespace: kube-system
+note: Container image "registry.k8s.io/kube-apiserver:v1.27.4" already present on
+  machine
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-apiserver}
+  kind: Pod
+  name: kube-apiserver-minikube
+  namespace: kube-system
+  uid: f241819aff4d77a34fc71bea1fac9af8
+type: Normal

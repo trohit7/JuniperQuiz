@@ -1,0 +1,13 @@
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: "2023-11-02T05:02:37Z"
+  labels:
+    apiserver.kubernetes.io/identity: kube-apiserver
+    kubernetes.io/hostname: minikube
+  name: apiserver-eqt674mfxb4j56mrjjkoe7b7ii
+  namespace: kube-system
+spec:
+  holderIdentity: apiserver-eqt674mfxb4j56mrjjkoe7b7ii_76a4c5f0-d302-4f87-9486-959935ae288f
+  leaseDurationSeconds: 3600
+  renewTime: "2023-11-02T05:05:21.640141Z"

@@ -1,0 +1,12 @@
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  creationTimestamp: "2023-09-27T08:59:18Z"
+  labels:
+    kube-aggregator.kubernetes.io/automanaged: "true"
+  name: v1.demo.demo.kcd.io
+spec:
+  group: demo.demo.kcd.io
+  groupPriorityMinimum: 1000
+  version: v1
+  versionPriority: 100

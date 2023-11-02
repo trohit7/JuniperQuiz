@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2023-09-27T07:41:57Z"
+  labels:
+    kubernetes.io/metadata.name: kube-public
+  name: kube-public
+spec:
+  finalizers:
+  - kubernetes

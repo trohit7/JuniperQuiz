@@ -1,0 +1,37 @@
+apiVersion: flowcontrol.apiserver.k8s.io/v1beta2
+kind: FlowSchema
+metadata:
+  annotations:
+    apf.kubernetes.io/autoupdate-spec: "true"
+  creationTimestamp: "2023-09-27T07:41:57Z"
+  name: endpoint-controller
+spec:
+  distinguisherMethod:
+    type: ByUser
+  matchingPrecedence: 150
+  priorityLevelConfiguration:
+    name: workload-high
+  rules:
+  - resourceRules:
+    - apiGroups:
+      - ""
+      namespaces:
+      - '*'
+      resources:
+      - endpoints
+      verbs:
+      - get
+      - create
+      - update
+    subjects:
+    - kind: User
+      user:
+        name: system:kube-controller-manager
+    - kind: ServiceAccount
+      serviceAccount:
+        name: endpoint-controller
+        namespace: kube-system
+    - kind: ServiceAccount
+      serviceAccount:
+        name: endpointslicemirroring-controller
+        namespace: kube-system

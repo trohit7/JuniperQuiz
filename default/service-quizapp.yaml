@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: juniperquiz
+    meta.helm.sh/release-namespace: default
+  creationTimestamp: "2023-10-03T06:17:49Z"
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  name: quizapp
+  namespace: default
+spec:
+  clusterIP: 10.104.213.91
+  clusterIPs:
+  - 10.104.213.91
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 32279
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: quizapp
+  sessionAffinity: None
+  type: NodePort

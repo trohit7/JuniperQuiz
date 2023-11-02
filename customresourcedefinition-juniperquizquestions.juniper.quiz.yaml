@@ -1,0 +1,35 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apiextensions.k8s.io/v1","kind":"CustomResourceDefinition","metadata":{"annotations":{},"name":"juniperquizquestions.juniper.quiz"},"spec":{"group":"juniper.quiz","names":{"kind":"JuniperQuizQuestion","plural":"juniperquizquestions","shortNames":["jqq"],"singular":"juniperquizquestion"},"scope":"Namespaced","versions":[{"name":"v1","schema":{"openAPIV3Schema":{"properties":{"spec":{"properties":{"answer":{"type":"string"},"question":{"type":"string"}},"type":"object"}},"type":"object"}},"served":true,"storage":true}]}}
+  creationTimestamp: "2023-09-28T07:33:52Z"
+  name: juniperquizquestions.juniper.quiz
+spec:
+  conversion:
+    strategy: None
+  group: juniper.quiz
+  names:
+    kind: JuniperQuizQuestion
+    listKind: JuniperQuizQuestionList
+    plural: juniperquizquestions
+    shortNames:
+    - jqq
+    singular: juniperquizquestion
+  scope: Namespaced
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        properties:
+          spec:
+            properties:
+              answer:
+                type: string
+              question:
+                type: string
+            type: object
+        type: object
+    served: true
+    storage: true

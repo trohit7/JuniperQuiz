@@ -1,0 +1,15 @@
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: "2023-09-27T07:42:00Z"
+  name: minikube
+  namespace: kube-node-lease
+  ownerReferences:
+  - apiVersion: v1
+    kind: Node
+    name: minikube
+    uid: f613aed8-8c97-48bd-851d-39def354560f
+spec:
+  holderIdentity: minikube
+  leaseDurationSeconds: 40
+  renewTime: "2023-11-02T05:05:20.160262Z"

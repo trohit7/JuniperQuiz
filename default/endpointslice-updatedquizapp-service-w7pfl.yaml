@@ -1,0 +1,49 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints:
+- addresses:
+  - 10.244.0.197
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: minikube
+  targetRef:
+    kind: Pod
+    name: updatedquizapp-deployment-68b5fc85fd-c7js9
+    namespace: default
+    uid: b54d17eb-4760-4672-a026-bea683bf94ca
+- addresses:
+  - 10.244.0.198
+  conditions:
+    ready: true
+    serving: true
+    terminating: false
+  nodeName: minikube
+  targetRef:
+    kind: Pod
+    name: updatedquizapp-deployment-68b5fc85fd-ht5vm
+    namespace: default
+    uid: 2d04915a-59f8-4d39-b148-077f0e97f7ee
+kind: EndpointSlice
+metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-10-11T14:20:04Z"
+  creationTimestamp: "2023-10-11T14:20:04Z"
+  generateName: updatedquizapp-service-
+  labels:
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    kubernetes.io/service-name: updatedquizapp-service
+  name: updatedquizapp-service-w7pfl
+  namespace: default
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: updatedquizapp-service
+    uid: aac75f17-2918-4490-adca-35dd9e97691c
+ports:
+- name: ""
+  port: 80
+  protocol: TCP
