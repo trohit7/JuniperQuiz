@@ -1,0 +1,24 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-11-02T07:14:20Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: quiztestcc-controller-manager-65bff94cdf-bh4g5
+  namespace: quiztestcc-system
+  resourceVersion: "373743"
+  uid: a57d95d3-4af3-4300-a897-0655bac16146
+kind: Event
+lastTimestamp: "2023-11-02T07:14:20Z"
+message: Node is not ready
+metadata:
+  creationTimestamp: "2023-11-02T07:14:20Z"
+  name: quiztestcc-controller-manager-65bff94cdf-bh4g5.1793bcf8b223e058
+  namespace: quiztestcc-system
+reason: NodeNotReady
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: node-controller
+type: Warning

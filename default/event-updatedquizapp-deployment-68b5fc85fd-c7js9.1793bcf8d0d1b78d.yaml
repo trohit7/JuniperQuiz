@@ -1,0 +1,24 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2023-11-02T07:14:21Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: updatedquizapp-deployment-68b5fc85fd-c7js9
+  namespace: default
+  resourceVersion: "373710"
+  uid: b54d17eb-4760-4672-a026-bea683bf94ca
+kind: Event
+lastTimestamp: "2023-11-02T07:14:21Z"
+message: Node is not ready
+metadata:
+  creationTimestamp: "2023-11-02T07:14:21Z"
+  name: updatedquizapp-deployment-68b5fc85fd-c7js9.1793bcf8d0d1b78d
+  namespace: default
+reason: NodeNotReady
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: node-controller
+type: Warning

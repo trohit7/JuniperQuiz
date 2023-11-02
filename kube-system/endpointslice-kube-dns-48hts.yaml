@@ -15,8 +15,6 @@ endpoints:
     uid: 89b7309a-554e-4a58-9b46-d816d721fd66
 kind: EndpointSlice
 metadata:
-  annotations:
-    endpoints.kubernetes.io/last-change-trigger-time: "2023-09-27T07:42:00Z"
   creationTimestamp: "2023-09-27T07:42:12Z"
   generateName: kube-dns-
   labels:

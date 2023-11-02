@@ -51,8 +51,6 @@ endpoints:
     uid: 256a4a6b-15d3-4e51-a1b5-73cc4b3d83fc
 kind: EndpointSlice
 metadata:
-  annotations:
-    endpoints.kubernetes.io/last-change-trigger-time: "2023-10-03T06:17:49Z"
   creationTimestamp: "2023-10-03T06:17:49Z"
   generateName: quizapp-
   labels:

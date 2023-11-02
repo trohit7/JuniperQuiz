@@ -15,8 +15,6 @@ endpoints:
     uid: a57d95d3-4af3-4300-a897-0655bac16146
 kind: EndpointSlice
 metadata:
-  annotations:
-    endpoints.kubernetes.io/last-change-trigger-time: "2023-11-02T05:02:42Z"
   creationTimestamp: "2023-09-27T16:35:27Z"
   generateName: quiztestcc-controller-manager-metrics-service-
   labels:
