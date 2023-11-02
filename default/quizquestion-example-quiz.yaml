@@ -3,10 +3,10 @@ kind: QuizQuestion
 metadata:
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"juniper.juniper.com/v1","kind":"QuizQuestion","metadata":{"annotations":{},"name":"example-quiz","namespace":"default"},"spec":{"answer":"rohitohit.sr","question":"What is the name of Ironman ?"}}
+      {"apiVersion":"juniper.juniper.com/v1","kind":"QuizQuestion","metadata":{"annotations":{},"name":"example-quiz","namespace":"default"},"spec":{"answer":"Robert.sr","question":"What is the name of Ironman ?"}}
   creationTimestamp: "2023-10-05T08:16:11Z"
   name: example-quiz
   namespace: default
 spec:
-  answer: rohitohit.sr
+  answer: Robert.sr
   question: What is the name of Ironman ?
