@@ -1,19 +1,19 @@
 action: StartKubeProxy
-apiVersion: v1
+apiVersion: events.k8s.io/v1
+deprecatedFirstTimestamp: null
+deprecatedLastTimestamp: null
+deprecatedSource: {}
 eventTime: "2023-11-02T05:02:32.783273Z"
-firstTimestamp: null
-involvedObject:
-  kind: Node
-  name: minikube
-  uid: minikube
 kind: Event
-lastTimestamp: null
 metadata:
   creationTimestamp: "2023-11-02T05:02:32Z"
   name: minikube.1793b5c77913e69d
   namespace: default
 reason: Starting
-reportingComponent: kube-proxy
+regarding:
+  kind: Node
+  name: minikube
+  uid: minikube
+reportingController: kube-proxy
 reportingInstance: kube-proxy-minikube
-source: {}
 type: Normal
