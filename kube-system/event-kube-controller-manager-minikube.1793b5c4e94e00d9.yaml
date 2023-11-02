@@ -1,24 +1,26 @@
-apiVersion: events.k8s.io/v1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2023-11-02T05:02:21Z"
-deprecatedLastTimestamp: "2023-11-02T05:02:21Z"
-deprecatedSource:
-  component: kubelet
-  host: minikube
+apiVersion: v1
+count: 1
 eventTime: null
-kind: Event
-metadata:
-  creationTimestamp: "2023-11-02T05:02:28Z"
-  name: kube-controller-manager-minikube.1793b5c4e94e00d9
-  namespace: kube-system
-note: Container image "registry.k8s.io/kube-controller-manager:v1.27.4" already present
-  on machine
-reason: Pulled
-regarding:
+firstTimestamp: "2023-11-02T05:02:21Z"
+involvedObject:
   apiVersion: v1
   fieldPath: spec.containers{kube-controller-manager}
   kind: Pod
   name: kube-controller-manager-minikube
   namespace: kube-system
   uid: b3702ceb912504d37098b922ccdcfa41
+kind: Event
+lastTimestamp: "2023-11-02T05:02:21Z"
+message: Container image "registry.k8s.io/kube-controller-manager:v1.27.4" already
+  present on machine
+metadata:
+  creationTimestamp: "2023-11-02T05:02:28Z"
+  name: kube-controller-manager-minikube.1793b5c4e94e00d9
+  namespace: kube-system
+reason: Pulled
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: minikube
 type: Normal

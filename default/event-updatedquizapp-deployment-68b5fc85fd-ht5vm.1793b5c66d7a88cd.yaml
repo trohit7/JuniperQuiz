@@ -1,23 +1,25 @@
-apiVersion: events.k8s.io/v1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2023-11-02T05:02:28Z"
-deprecatedLastTimestamp: "2023-11-02T05:02:28Z"
-deprecatedSource:
-  component: kubelet
-  host: minikube
+apiVersion: v1
+count: 1
 eventTime: null
-kind: Event
-metadata:
-  creationTimestamp: "2023-11-02T05:02:29Z"
-  name: updatedquizapp-deployment-68b5fc85fd-ht5vm.1793b5c66d7a88cd
-  namespace: default
-note: Pod sandbox changed, it will be killed and re-created.
-reason: SandboxChanged
-regarding:
+firstTimestamp: "2023-11-02T05:02:28Z"
+involvedObject:
   apiVersion: v1
   kind: Pod
   name: updatedquizapp-deployment-68b5fc85fd-ht5vm
   namespace: default
   resourceVersion: "373179"
   uid: 2d04915a-59f8-4d39-b148-077f0e97f7ee
+kind: Event
+lastTimestamp: "2023-11-02T05:02:28Z"
+message: Pod sandbox changed, it will be killed and re-created.
+metadata:
+  creationTimestamp: "2023-11-02T05:02:29Z"
+  name: updatedquizapp-deployment-68b5fc85fd-ht5vm.1793b5c66d7a88cd
+  namespace: default
+reason: SandboxChanged
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: minikube
 type: Normal

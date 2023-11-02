@@ -1,19 +1,8 @@
-apiVersion: events.k8s.io/v1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2023-11-02T05:02:33Z"
-deprecatedLastTimestamp: "2023-11-02T05:02:33Z"
-deprecatedSource:
-  component: kubelet
-  host: minikube
+apiVersion: v1
+count: 1
 eventTime: null
-kind: Event
-metadata:
-  creationTimestamp: "2023-11-02T05:02:33Z"
-  name: updatedquizapp-deployment4-746d9b5887-d8mww.1793b5c7861a5dfa
-  namespace: default
-note: Created container updatedquizapp4
-reason: Created
-regarding:
+firstTimestamp: "2023-11-02T05:02:33Z"
+involvedObject:
   apiVersion: v1
   fieldPath: spec.containers{updatedquizapp4}
   kind: Pod
@@ -21,4 +10,17 @@ regarding:
   namespace: default
   resourceVersion: "373153"
   uid: a9136b78-44ce-4351-8795-8e58a6a0d7a2
+kind: Event
+lastTimestamp: "2023-11-02T05:02:33Z"
+message: Created container updatedquizapp4
+metadata:
+  creationTimestamp: "2023-11-02T05:02:33Z"
+  name: updatedquizapp-deployment4-746d9b5887-d8mww.1793b5c7861a5dfa
+  namespace: default
+reason: Created
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: minikube
 type: Normal

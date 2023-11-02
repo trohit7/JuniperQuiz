@@ -1,20 +1,22 @@
-apiVersion: events.k8s.io/v1
-deprecatedCount: 8
-deprecatedFirstTimestamp: "2023-11-02T05:02:20Z"
-deprecatedLastTimestamp: "2023-11-02T05:02:21Z"
-deprecatedSource:
-  component: kubelet
-  host: minikube
+apiVersion: v1
+count: 8
 eventTime: null
+firstTimestamp: "2023-11-02T05:02:20Z"
+involvedObject:
+  kind: Node
+  name: minikube
+  uid: minikube
 kind: Event
+lastTimestamp: "2023-11-02T05:02:21Z"
+message: 'Node minikube status is now: NodeHasNoDiskPressure'
 metadata:
   creationTimestamp: "2023-11-02T05:02:27Z"
   name: minikube.1793b5c4a89fc8e3
   namespace: default
-note: 'Node minikube status is now: NodeHasNoDiskPressure'
 reason: NodeHasNoDiskPressure
-regarding:
-  kind: Node
-  name: minikube
-  uid: minikube
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: minikube
 type: Normal

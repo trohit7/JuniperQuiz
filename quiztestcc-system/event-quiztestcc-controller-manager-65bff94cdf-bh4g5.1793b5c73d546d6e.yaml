@@ -1,20 +1,8 @@
-apiVersion: events.k8s.io/v1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2023-11-02T05:02:31Z"
-deprecatedLastTimestamp: "2023-11-02T05:02:31Z"
-deprecatedSource:
-  component: kubelet
-  host: minikube
+apiVersion: v1
+count: 1
 eventTime: null
-kind: Event
-metadata:
-  creationTimestamp: "2023-11-02T05:02:31Z"
-  name: quiztestcc-controller-manager-65bff94cdf-bh4g5.1793b5c73d546d6e
-  namespace: quiztestcc-system
-note: Container image "gcr.io/kubebuilder/kube-rbac-proxy:v0.14.1" already present
-  on machine
-reason: Pulled
-regarding:
+firstTimestamp: "2023-11-02T05:02:31Z"
+involvedObject:
   apiVersion: v1
   fieldPath: spec.containers{kube-rbac-proxy}
   kind: Pod
@@ -22,4 +10,18 @@ regarding:
   namespace: quiztestcc-system
   resourceVersion: "373165"
   uid: a57d95d3-4af3-4300-a897-0655bac16146
+kind: Event
+lastTimestamp: "2023-11-02T05:02:31Z"
+message: Container image "gcr.io/kubebuilder/kube-rbac-proxy:v0.14.1" already present
+  on machine
+metadata:
+  creationTimestamp: "2023-11-02T05:02:31Z"
+  name: quiztestcc-controller-manager-65bff94cdf-bh4g5.1793b5c73d546d6e
+  namespace: quiztestcc-system
+reason: Pulled
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: minikube
 type: Normal

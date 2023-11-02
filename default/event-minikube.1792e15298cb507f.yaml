@@ -1,20 +1,22 @@
-apiVersion: events.k8s.io/v1
-deprecatedCount: 28
-deprecatedFirstTimestamp: "2023-10-30T12:09:14Z"
-deprecatedLastTimestamp: "2023-10-31T12:56:20Z"
-deprecatedSource:
-  component: kubelet
-  host: minikube
+apiVersion: v1
+count: 28
 eventTime: null
+firstTimestamp: "2023-10-30T12:09:14Z"
+involvedObject:
+  kind: Node
+  name: minikube
+  uid: minikube
 kind: Event
+lastTimestamp: "2023-10-31T12:56:20Z"
+message: 'Node minikube status is now: NodeHasSufficientPID'
 metadata:
   creationTimestamp: "2023-10-31T12:56:20Z"
   name: minikube.1792e15298cb507f
   namespace: default
-note: 'Node minikube status is now: NodeHasSufficientPID'
 reason: NodeHasSufficientPID
-regarding:
-  kind: Node
-  name: minikube
-  uid: minikube
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: minikube
 type: Normal

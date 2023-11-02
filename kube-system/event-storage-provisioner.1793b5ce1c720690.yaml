@@ -1,19 +1,8 @@
-apiVersion: events.k8s.io/v1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2023-11-02T05:03:01Z"
-deprecatedLastTimestamp: "2023-11-02T05:03:01Z"
-deprecatedSource:
-  component: kubelet
-  host: minikube
+apiVersion: v1
+count: 1
 eventTime: null
-kind: Event
-metadata:
-  creationTimestamp: "2023-11-02T05:03:01Z"
-  name: storage-provisioner.1793b5ce1c720690
-  namespace: kube-system
-note: Back-off restarting failed container storage-provisioner in pod storage-provisioner_kube-system(bb02a0f8-7f8b-406c-8a44-c4128d3bc5a5)
-reason: BackOff
-regarding:
+firstTimestamp: "2023-11-02T05:03:01Z"
+involvedObject:
   apiVersion: v1
   fieldPath: spec.containers{storage-provisioner}
   kind: Pod
@@ -21,4 +10,17 @@ regarding:
   namespace: kube-system
   resourceVersion: "373155"
   uid: bb02a0f8-7f8b-406c-8a44-c4128d3bc5a5
+kind: Event
+lastTimestamp: "2023-11-02T05:03:01Z"
+message: Back-off restarting failed container storage-provisioner in pod storage-provisioner_kube-system(bb02a0f8-7f8b-406c-8a44-c4128d3bc5a5)
+metadata:
+  creationTimestamp: "2023-11-02T05:03:01Z"
+  name: storage-provisioner.1793b5ce1c720690
+  namespace: kube-system
+reason: BackOff
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: minikube
 type: Warning

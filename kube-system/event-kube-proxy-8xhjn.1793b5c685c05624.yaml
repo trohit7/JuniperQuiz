@@ -1,19 +1,8 @@
-apiVersion: events.k8s.io/v1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2023-11-02T05:02:28Z"
-deprecatedLastTimestamp: "2023-11-02T05:02:28Z"
-deprecatedSource:
-  component: kubelet
-  host: minikube
+apiVersion: v1
+count: 1
 eventTime: null
-kind: Event
-metadata:
-  creationTimestamp: "2023-11-02T05:02:29Z"
-  name: kube-proxy-8xhjn.1793b5c685c05624
-  namespace: kube-system
-note: Created container kube-proxy
-reason: Created
-regarding:
+firstTimestamp: "2023-11-02T05:02:28Z"
+involvedObject:
   apiVersion: v1
   fieldPath: spec.containers{kube-proxy}
   kind: Pod
@@ -21,4 +10,17 @@ regarding:
   namespace: kube-system
   resourceVersion: "373157"
   uid: e98bea53-f214-4c9d-858b-99d99d2c76b8
+kind: Event
+lastTimestamp: "2023-11-02T05:02:28Z"
+message: Created container kube-proxy
+metadata:
+  creationTimestamp: "2023-11-02T05:02:29Z"
+  name: kube-proxy-8xhjn.1793b5c685c05624
+  namespace: kube-system
+reason: Created
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: minikube
 type: Normal
