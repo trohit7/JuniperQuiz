@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Endpoints
 metadata:
   annotations:
-    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"minikube_ca839d0b-9d86-47e5-bc82-430b666e0841","leaseDurationSeconds":15,"acquireTime":"2023-11-02T05:03:32Z","renewTime":"2023-11-02T06:00:23Z","leaderTransitions":25}'
+    control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"minikube_ca839d0b-9d86-47e5-bc82-430b666e0841","leaseDurationSeconds":15,"acquireTime":"2023-11-02T05:03:32Z","renewTime":"2023-11-02T06:00:33Z","leaderTransitions":25}'
     kubectl.kubernetes.io/last-applied-configuration: |
       {"apiVersion":"v1","kind":"Endpoints","metadata":{"annotations":{},"labels":{"addonmanager.kubernetes.io/mode":"Reconcile"},"name":"k8s.io-minikube-hostpath","namespace":"kube-system"}}
   creationTimestamp: "2023-09-27T07:42:43Z"
