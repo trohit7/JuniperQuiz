@@ -73,7 +73,7 @@ data:
         tokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2023-09-27T07:42:00Z"
+  creationTimestamp: "2023-11-21T12:47:18Z"
   labels:
     app: kube-proxy
   name: kube-proxy

@@ -46,6 +46,6 @@ data:
   requestheader-username-headers: '["X-Remote-User"]'
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2023-09-27T07:41:57Z"
+  creationTimestamp: "2023-11-21T12:47:14Z"
   name: extension-apiserver-authentication
   namespace: kube-system

@@ -1,0 +1,22 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 8
+deprecatedFirstTimestamp: "2023-12-19T07:12:29Z"
+deprecatedLastTimestamp: "2023-12-19T16:20:12Z"
+deprecatedSource:
+  component: node-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-12-19T15:08:31Z"
+  name: etcd-minikube.17a22a25648e1dbc
+  namespace: kube-system
+note: Node is not ready
+reason: NodeNotReady
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: etcd-minikube
+  namespace: kube-system
+  resourceVersion: "298150"
+  uid: 9405d3e3-cfd7-4d10-bea4-5fa98bc4f2fd
+type: Warning

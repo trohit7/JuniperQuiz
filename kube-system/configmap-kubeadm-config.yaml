@@ -36,6 +36,6 @@ data:
         leader-elect: "false"
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2023-09-27T07:41:58Z"
+  creationTimestamp: "2023-11-21T12:47:17Z"
   name: kubeadm-config
   namespace: kube-system

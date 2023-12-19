@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2023-12-11T11:45:45Z"
+  labels:
+    app: example-webhook
+    pod-template-hash: 6966fcf6f7
+  name: example-webhook-6966fcf6f7
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: example-webhook
+    uid: 64d7d4db-42cb-432c-b1ba-1f8232405672
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: example-webhook
+      pod-template-hash: 6966fcf6f7
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: example-webhook
+        pod-template-hash: 6966fcf6f7
+    spec:
+      containers:
+      - image: trohit7/muatatewebhook:v26
+        imagePullPolicy: IfNotPresent
+        name: server
+        ports:
+        - containerPort: 8443
+          name: tls
+          protocol: TCP
+        - containerPort: 80
+          name: metrics
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /etc/webhook/certs/
+          name: webhook-tls-certs
+          readOnly: true
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        kubernetes.io/os: linux
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1234
+      serviceAccount: example-webhook
+      serviceAccountName: example-webhook
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: webhook-tls-certs
+        secret:
+          defaultMode: 420
+          secretName: example-webhook-tls

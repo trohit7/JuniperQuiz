@@ -1,0 +1,22 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 8
+deprecatedFirstTimestamp: "2023-12-19T07:12:28Z"
+deprecatedLastTimestamp: "2023-12-19T16:20:13Z"
+deprecatedSource:
+  component: node-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-12-19T15:08:30Z"
+  name: coredns-5d78c9869d-thgpb.17a22a2558f00f51
+  namespace: kube-system
+note: Node is not ready
+reason: NodeNotReady
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: coredns-5d78c9869d-thgpb
+  namespace: kube-system
+  resourceVersion: "298164"
+  uid: 640b8735-be3e-433f-91ca-8c2f81d4bcdd
+type: Warning

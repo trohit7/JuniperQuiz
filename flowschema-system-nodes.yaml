@@ -3,7 +3,7 @@ kind: FlowSchema
 metadata:
   annotations:
     apf.kubernetes.io/autoupdate-spec: "true"
-  creationTimestamp: "2023-09-27T07:41:57Z"
+  creationTimestamp: "2023-11-21T12:47:15Z"
   name: system-nodes
 spec:
   distinguisherMethod:

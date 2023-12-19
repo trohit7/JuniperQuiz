@@ -4,7 +4,7 @@ metadata:
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: |
       {"apiVersion":"v1","kind":"Pod","metadata":{"annotations":{},"labels":{"addonmanager.kubernetes.io/mode":"Reconcile","integration-test":"storage-provisioner"},"name":"storage-provisioner","namespace":"kube-system"},"spec":{"containers":[{"command":["/storage-provisioner"],"image":"gcr.io/k8s-minikube/storage-provisioner:v5","imagePullPolicy":"IfNotPresent","name":"storage-provisioner","volumeMounts":[{"mountPath":"/tmp","name":"tmp"}]}],"hostNetwork":true,"serviceAccountName":"storage-provisioner","volumes":[{"hostPath":{"path":"/tmp","type":"Directory"},"name":"tmp"}]}}
-  creationTimestamp: "2023-09-27T07:42:02Z"
+  creationTimestamp: "2023-11-21T12:47:22Z"
   labels:
     addonmanager.kubernetes.io/mode: Reconcile
     integration-test: storage-provisioner
@@ -24,7 +24,7 @@ spec:
     - mountPath: /tmp
       name: tmp
     - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
-      name: kube-api-access-rjvnf
+      name: kube-api-access-6slpg
       readOnly: true
   dnsPolicy: ClusterFirst
   enableServiceLinks: true
@@ -52,7 +52,7 @@ spec:
       path: /tmp
       type: Directory
     name: tmp
-  - name: kube-api-access-rjvnf
+  - name: kube-api-access-6slpg
     projected:
       defaultMode: 420
       sources:

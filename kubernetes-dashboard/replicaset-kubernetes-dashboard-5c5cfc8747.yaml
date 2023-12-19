@@ -1,0 +1,82 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2023-11-21T12:47:31Z"
+  labels:
+    gcp-auth-skip-secret: "true"
+    k8s-app: kubernetes-dashboard
+    pod-template-hash: 5c5cfc8747
+  name: kubernetes-dashboard-5c5cfc8747
+  namespace: kubernetes-dashboard
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: kubernetes-dashboard
+    uid: 7c3612c3-03a2-4701-9859-871180a648fd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: kubernetes-dashboard
+      pod-template-hash: 5c5cfc8747
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        gcp-auth-skip-secret: "true"
+        k8s-app: kubernetes-dashboard
+        pod-template-hash: 5c5cfc8747
+    spec:
+      containers:
+      - args:
+        - --namespace=kubernetes-dashboard
+        - --enable-skip-login
+        - --disable-settings-authorizer
+        image: docker.io/kubernetesui/dashboard:v2.7.0@sha256:2e500d29e9d5f4a086b908eb8dfe7ecac57d2ab09d65b24f588b1d449841ef93
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 9090
+            scheme: HTTP
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 30
+        name: kubernetes-dashboard
+        ports:
+        - containerPort: 9090
+          protocol: TCP
+        resources: {}
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          runAsGroup: 2001
+          runAsUser: 1001
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /tmp
+          name: tmp-volume
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        kubernetes.io/os: linux
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: kubernetes-dashboard
+      serviceAccountName: kubernetes-dashboard
+      terminationGracePeriodSeconds: 30
+      tolerations:
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/master
+      volumes:
+      - emptyDir: {}
+        name: tmp-volume

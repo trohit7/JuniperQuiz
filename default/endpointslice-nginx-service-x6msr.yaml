@@ -1,0 +1,14 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints: null
+kind: EndpointSlice
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"addressType":"IPv4","apiVersion":"discovery.k8s.io/v1","kind":"EndpointSlice","metadata":{"annotations":{},"labels":{"my-label":"valid-value"},"name":"nginx-service-x6msr","namespace":"default"}}
+  creationTimestamp: "2023-11-28T20:02:58Z"
+  labels:
+    my-label: valid-value
+  name: nginx-service-x6msr
+  namespace: default
+ports: null

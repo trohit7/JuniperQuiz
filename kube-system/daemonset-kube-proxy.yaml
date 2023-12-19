@@ -3,7 +3,7 @@ kind: DaemonSet
 metadata:
   annotations:
     deprecated.daemonset.template.generation: "1"
-  creationTimestamp: "2023-09-27T07:42:00Z"
+  creationTimestamp: "2023-11-21T12:47:18Z"
   labels:
     k8s-app: kube-proxy
   name: kube-proxy

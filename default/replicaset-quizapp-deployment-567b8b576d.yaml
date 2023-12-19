@@ -2,10 +2,10 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   annotations:
-    deployment.kubernetes.io/desired-replicas: "2"
-    deployment.kubernetes.io/max-replicas: "3"
-    deployment.kubernetes.io/revision: "2"
-  creationTimestamp: "2023-09-29T06:39:15Z"
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2023-11-29T17:25:07Z"
   labels:
     app: quizapp
     pod-template-hash: 567b8b576d
@@ -17,9 +17,9 @@ metadata:
     controller: true
     kind: Deployment
     name: quizapp-deployment
-    uid: 8561e09b-7179-44a2-9cf5-9fc5528e0c73
+    uid: c886e785-fd5f-4d7a-8822-6fbd8c76b3fa
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: quizapp

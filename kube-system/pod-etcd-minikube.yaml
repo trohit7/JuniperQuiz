@@ -5,9 +5,9 @@ metadata:
     kubeadm.kubernetes.io/etcd.advertise-client-urls: https://192.168.49.2:2379
     kubernetes.io/config.hash: 8af0e85a28544808d52bb7c47ad824ed
     kubernetes.io/config.mirror: 8af0e85a28544808d52bb7c47ad824ed
-    kubernetes.io/config.seen: "2023-09-27T07:42:00.136297068Z"
+    kubernetes.io/config.seen: "2023-11-21T12:47:18.835597882Z"
     kubernetes.io/config.source: file
-  creationTimestamp: "2023-09-27T07:42:00Z"
+  creationTimestamp: "2023-11-21T12:47:19Z"
   labels:
     component: etcd
     tier: control-plane
@@ -18,7 +18,7 @@ metadata:
     controller: true
     kind: Node
     name: minikube
-    uid: f613aed8-8c97-48bd-851d-39def354560f
+    uid: 5daf7154-88fc-40a7-a306-ea507831de30
 spec:
   containers:
   - command:

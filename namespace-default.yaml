@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  creationTimestamp: "2023-09-27T07:41:57Z"
+  creationTimestamp: "2023-11-21T12:47:15Z"
   labels:
     kubernetes.io/metadata.name: default
   name: default

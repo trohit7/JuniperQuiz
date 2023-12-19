@@ -5,7 +5,7 @@ metadata:
     kubeadm.alpha.kubernetes.io/cri-socket: unix:///var/run/cri-dockerd.sock
     node.alpha.kubernetes.io/ttl: "0"
     volumes.kubernetes.io/controller-managed-attach-detach: "true"
-  creationTimestamp: "2023-09-27T07:41:57Z"
+  creationTimestamp: "2023-11-21T12:47:14Z"
   labels:
     beta.kubernetes.io/arch: amd64
     beta.kubernetes.io/os: linux
@@ -15,7 +15,7 @@ metadata:
     minikube.k8s.io/commit: fd7ecd9c4599bef9f04c0986c4a0187f98a4396e
     minikube.k8s.io/name: minikube
     minikube.k8s.io/primary: "true"
-    minikube.k8s.io/updated_at: 2023_09_27T13_12_00_0700
+    minikube.k8s.io/updated_at: 2023_11_21T18_17_19_0700
     minikube.k8s.io/version: v1.31.2
     node-role.kubernetes.io/control-plane: ""
     node.kubernetes.io/exclude-from-external-load-balancers: ""

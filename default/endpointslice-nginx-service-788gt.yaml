@@ -1,0 +1,25 @@
+addressType: IPv4
+apiVersion: discovery.k8s.io/v1
+endpoints: null
+kind: EndpointSlice
+metadata:
+  creationTimestamp: "2023-11-29T06:27:48Z"
+  generateName: nginx-service-
+  labels:
+    Operation: CREATE
+    app: nginx
+    author: system_serviceaccount_kube-system_endpointslice-controller
+    endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+    example-webhook-enabled: "true"
+    kubernetes.io/service-name: nginx-service
+    operation: UPDATE
+  name: nginx-service-788gt
+  namespace: default
+  ownerReferences:
+  - apiVersion: v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Service
+    name: nginx-service
+    uid: 8ef4a7fd-10d1-49b4-b4b0-9d8ea8ccfc4c
+ports: null

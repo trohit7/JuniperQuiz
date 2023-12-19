@@ -1,0 +1,22 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 8
+deprecatedFirstTimestamp: "2023-12-19T07:12:29Z"
+deprecatedLastTimestamp: "2023-12-19T16:20:13Z"
+deprecatedSource:
+  component: node-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-12-19T15:08:30Z"
+  name: kube-proxy-ppw6s.17a22a255ed988ef
+  namespace: kube-system
+note: Node is not ready
+reason: NodeNotReady
+regarding:
+  apiVersion: v1
+  kind: Pod
+  name: kube-proxy-ppw6s
+  namespace: kube-system
+  resourceVersion: "298158"
+  uid: 9f6fe77b-02b7-44cf-81e7-a685f24e4645
+type: Warning

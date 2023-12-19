@@ -4,7 +4,7 @@ metadata:
   annotations:
     kubectl.kubernetes.io/last-applied-configuration: |
       {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRole","metadata":{"annotations":{},"name":"configmap-list-role"},"rules":[{"apiGroups":[""],"resources":["configmaps"],"verbs":["list"]}]}
-  creationTimestamp: "2023-09-29T05:46:16Z"
+  creationTimestamp: "2023-11-29T17:23:28Z"
   name: configmap-list-role
 rules:
 - apiGroups:

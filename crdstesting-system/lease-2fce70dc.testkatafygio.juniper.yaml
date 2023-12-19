@@ -1,0 +1,12 @@
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: "2023-11-30T06:21:57Z"
+  name: 2fce70dc.testkatafygio.juniper
+  namespace: crdstesting-system
+spec:
+  acquireTime: "2023-12-19T16:57:32.925003Z"
+  holderIdentity: crdstesting-controller-manager-595f599f59-8xm25_f0c10045-f480-4a2a-a8eb-656a41e7bbeb
+  leaseDurationSeconds: 15
+  leaseTransitions: 451
+  renewTime: "2023-12-19T16:59:31.448556Z"

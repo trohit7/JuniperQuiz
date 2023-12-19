@@ -1,0 +1,24 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2023-12-19T16:57:32Z"
+deprecatedLastTimestamp: "2023-12-19T16:57:32Z"
+deprecatedSource:
+  component: crdstesting-controller-manager-595f599f59-8xm25_f0c10045-f480-4a2a-a8eb-656a41e7bbeb
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-12-19T16:57:32Z"
+  name: 2fce70dc.testkatafygio.juniper.17a24a129ebc78c8
+  namespace: crdstesting-system
+note: crdstesting-controller-manager-595f599f59-8xm25_f0c10045-f480-4a2a-a8eb-656a41e7bbeb
+  became leader
+reason: LeaderElection
+regarding:
+  apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  name: 2fce70dc.testkatafygio.juniper
+  namespace: crdstesting-system
+  resourceVersion: "303424"
+  uid: 2bce6010-bc08-468a-9056-0cafcd2e52dd
+reportingController: crdstesting-controller-manager-595f599f59-8xm25_f0c10045-f480-4a2a-a8eb-656a41e7bbeb
+type: Normal

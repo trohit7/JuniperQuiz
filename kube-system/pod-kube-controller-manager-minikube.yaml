@@ -4,9 +4,9 @@ metadata:
   annotations:
     kubernetes.io/config.hash: b3702ceb912504d37098b922ccdcfa41
     kubernetes.io/config.mirror: b3702ceb912504d37098b922ccdcfa41
-    kubernetes.io/config.seen: "2023-09-27T07:42:00.136295645Z"
+    kubernetes.io/config.seen: "2023-11-21T12:47:18.835589538Z"
     kubernetes.io/config.source: file
-  creationTimestamp: "2023-09-27T07:42:00Z"
+  creationTimestamp: "2023-11-21T12:47:19Z"
   labels:
     component: kube-controller-manager
     tier: control-plane
@@ -17,7 +17,7 @@ metadata:
     controller: true
     kind: Node
     name: minikube
-    uid: f613aed8-8c97-48bd-851d-39def354560f
+    uid: 5daf7154-88fc-40a7-a306-ea507831de30
 spec:
   containers:
   - command:

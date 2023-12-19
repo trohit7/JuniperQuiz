@@ -1,0 +1,24 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"RoleBinding","metadata":{"annotations":{},"labels":{"app.kubernetes.io/component":"rbac","app.kubernetes.io/created-by":"crdstesting","app.kubernetes.io/instance":"leader-election-rolebinding","app.kubernetes.io/managed-by":"kustomize","app.kubernetes.io/name":"rolebinding","app.kubernetes.io/part-of":"crdstesting"},"name":"crdstesting-leader-election-rolebinding","namespace":"crdstesting-system"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"Role","name":"crdstesting-leader-election-role"},"subjects":[{"kind":"ServiceAccount","name":"crdstesting-controller-manager","namespace":"crdstesting-system"}]}
+  creationTimestamp: "2023-11-30T06:21:47Z"
+  labels:
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: crdstesting
+    app.kubernetes.io/instance: leader-election-rolebinding
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: rolebinding
+    app.kubernetes.io/part-of: crdstesting
+  name: crdstesting-leader-election-rolebinding
+  namespace: crdstesting-system
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: crdstesting-leader-election-role
+subjects:
+- kind: ServiceAccount
+  name: crdstesting-controller-manager
+  namespace: crdstesting-system

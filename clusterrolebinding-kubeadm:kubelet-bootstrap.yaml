@@ -1,7 +1,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  creationTimestamp: "2023-09-27T07:41:59Z"
+  creationTimestamp: "2023-11-21T12:47:18Z"
   name: kubeadm:kubelet-bootstrap
 roleRef:
   apiGroup: rbac.authorization.k8s.io

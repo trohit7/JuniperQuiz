@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  creationTimestamp: "2023-11-29T06:27:26Z"
+  labels:
+    Operation: CREATE
+    app: nginx
+    author: system_serviceaccount_kube-system_endpoint-controller
+    example-webhook-enabled: "true"
+    operation: UPDATE
+  name: nginx-service
+  namespace: default
