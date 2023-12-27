@@ -8,7 +8,7 @@ metadata:
     pv.kubernetes.io/bound-by-controller: "yes"
     volume.beta.kubernetes.io/storage-provisioner: k8s.io/minikube-hostpath
     volume.kubernetes.io/storage-provisioner: k8s.io/minikube-hostpath
-  creationTimestamp: "2023-11-30T06:22:58Z"
+  creationTimestamp: "2023-12-21T11:24:35Z"
   finalizers:
   - kubernetes.io/pvc-protection
   labels:
@@ -26,4 +26,4 @@ spec:
       storage: 1Gi
   storageClassName: standard
   volumeMode: Filesystem
-  volumeName: pvc-36b9e8ab-2304-4a99-a6e8-a670f9c5f999
+  volumeName: pvc-a8c7d263-6168-4589-9416-c03b21828685
