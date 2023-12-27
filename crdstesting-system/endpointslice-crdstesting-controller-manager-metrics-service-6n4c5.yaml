@@ -4,8 +4,8 @@ endpoints:
 - addresses:
   - 10.244.1.228
   conditions:
-    ready: true
-    serving: true
+    ready: false
+    serving: false
     terminating: false
   nodeName: minikube
   targetRef:
@@ -16,7 +16,7 @@ endpoints:
 kind: EndpointSlice
 metadata:
   annotations:
-    endpoints.kubernetes.io/last-change-trigger-time: "2023-12-27T10:12:12Z"
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-12-27T10:14:23Z"
   creationTimestamp: "2023-11-30T06:21:47Z"
   generateName: crdstesting-controller-manager-metrics-service-
   labels:
