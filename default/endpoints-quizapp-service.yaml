@@ -6,7 +6,7 @@ metadata:
   namespace: default
 subsets:
 - addresses:
-  - ip: 10.244.1.218
+  - ip: 10.244.1.230
     nodeName: minikube
     targetRef:
       kind: Pod

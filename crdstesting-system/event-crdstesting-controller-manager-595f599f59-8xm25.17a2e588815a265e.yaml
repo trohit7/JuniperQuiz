@@ -1,0 +1,25 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 21
+deprecatedFirstTimestamp: "2023-12-21T16:26:23Z"
+deprecatedLastTimestamp: "2023-12-27T09:06:12Z"
+deprecatedSource:
+  component: kubelet
+  host: minikube
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-12-27T09:03:02Z"
+  name: crdstesting-controller-manager-595f599f59-8xm25.17a2e588815a265e
+  namespace: crdstesting-system
+note: 'Readiness probe failed: Get "http://10.244.1.228:8081/readyz": dial tcp 10.244.1.228:8081:
+  connect: connection refused'
+reason: Unhealthy
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{manager}
+  kind: Pod
+  name: crdstesting-controller-manager-595f599f59-8xm25
+  namespace: crdstesting-system
+  resourceVersion: "370719"
+  uid: 116ed313-6135-4d65-80db-764194f2e9ac
+type: Warning

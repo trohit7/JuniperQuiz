@@ -1,0 +1,12 @@
+apiVersion: juniper.testkatafygio.juniper/v1
+kind: DemoResource
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"juniper.testkatafygio.juniper/v1","kind":"DemoResource","metadata":{"annotations":{},"name":"example-demoresource","namespace":"default"},"spec":{"name":"example-name","namespace":"example-namespace"}}
+  creationTimestamp: "2023-12-21T14:09:34Z"
+  name: example-demoresource
+  namespace: default
+spec:
+  name: example-name
+  namespace: example-namespace

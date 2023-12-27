@@ -2,7 +2,7 @@ addressType: IPv4
 apiVersion: discovery.k8s.io/v1
 endpoints:
 - addresses:
-  - 10.244.1.219
+  - 10.244.1.232
   conditions:
     ready: true
     serving: true
@@ -10,9 +10,9 @@ endpoints:
   nodeName: minikube
   targetRef:
     kind: Pod
-    name: example-webhook-6966fcf6f7-hdqh2
+    name: example-webhook-685dd8c794-65v9f
     namespace: default
-    uid: 9d4e151e-1438-4d99-8f6c-3dfff4d2f228
+    uid: 6037da12-a5f2-4acc-a83f-561d1df6386b
 kind: EndpointSlice
 metadata:
   creationTimestamp: "2023-12-11T11:45:45Z"

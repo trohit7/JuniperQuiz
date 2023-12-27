@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  annotations:
+    hostPathProvisionerIdentity: 3ea044c0-e2b8-490b-9e45-c1cb63380209
+    pv.kubernetes.io/provisioned-by: k8s.io/minikube-hostpath
+  creationTimestamp: "2023-11-30T06:22:58Z"
+  finalizers:
+  - kubernetes.io/pv-protection
+  name: pvc-36b9e8ab-2304-4a99-a6e8-a670f9c5f999
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  claimRef:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: katafygio
+    namespace: default
+    resourceVersion: "134549"
+    uid: 36b9e8ab-2304-4a99-a6e8-a670f9c5f999
+  hostPath:
+    path: /tmp/hostpath-provisioner/default/katafygio
+    type: ""
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: standard
+  volumeMode: Filesystem

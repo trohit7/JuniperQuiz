@@ -4,12 +4,12 @@ metadata:
   annotations:
     deployment.kubernetes.io/desired-replicas: "1"
     deployment.kubernetes.io/max-replicas: "2"
-    deployment.kubernetes.io/revision: "1"
-  creationTimestamp: "2023-12-11T11:45:45Z"
+    deployment.kubernetes.io/revision: "2"
+  creationTimestamp: "2023-12-21T13:49:16Z"
   labels:
     app: example-webhook
-    pod-template-hash: 6966fcf6f7
-  name: example-webhook-6966fcf6f7
+    pod-template-hash: 685dd8c794
+  name: example-webhook-685dd8c794
   namespace: default
   ownerReferences:
   - apiVersion: apps/v1
@@ -19,20 +19,20 @@ metadata:
     name: example-webhook
     uid: 64d7d4db-42cb-432c-b1ba-1f8232405672
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: example-webhook
-      pod-template-hash: 6966fcf6f7
+      pod-template-hash: 685dd8c794
   template:
     metadata:
       creationTimestamp: null
       labels:
         app: example-webhook
-        pod-template-hash: 6966fcf6f7
+        pod-template-hash: 685dd8c794
     spec:
       containers:
-      - image: trohit7/muatatewebhook:v26
+      - image: trohit7/muatatewebhook:v25
         imagePullPolicy: IfNotPresent
         name: server
         ports:

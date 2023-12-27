@@ -1,0 +1,86 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2023-12-21T13:49:16Z"
+  generateName: example-webhook-685dd8c794-
+  labels:
+    app: example-webhook
+    pod-template-hash: 685dd8c794
+  name: example-webhook-685dd8c794-65v9f
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: example-webhook-685dd8c794
+    uid: e1cd379b-48ab-437b-bfe5-41b483e1f15a
+spec:
+  containers:
+  - image: trohit7/muatatewebhook:v25
+    imagePullPolicy: IfNotPresent
+    name: server
+    ports:
+    - containerPort: 8443
+      name: tls
+      protocol: TCP
+    - containerPort: 80
+      name: metrics
+      protocol: TCP
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/webhook/certs/
+      name: webhook-tls-certs
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-tdqrp
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: minikube
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1234
+  serviceAccount: example-webhook
+  serviceAccountName: example-webhook
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: webhook-tls-certs
+    secret:
+      defaultMode: 420
+      secretName: example-webhook-tls
+  - name: kube-api-access-tdqrp
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace

@@ -1,28 +1,33 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: ReplicaSet
 metadata:
   annotations:
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "1"
     deployment.kubernetes.io/revision: "1"
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"app":"katafygio","chart":"katafygio-0.5.1","heritage":"Helm","release":"katafygio"},"name":"katafygio","namespace":"default"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"katafygio","release":"katafygio"}},"strategy":{"type":"Recreate"},"template":{"metadata":{"labels":{"app":"katafygio","chart":"katafygio-0.5.1","heritage":"Helm","release":"katafygio"}},"spec":{"containers":[{"args":["--local-dir=/var/lib/katafygio/data","--healthcheck-port=8080","--log-level=info","--log-output=stdout","--resync-interval=300","--exclude-kind=replicasets","--exclude-kind=endpoints","--exclude-kind=events"],"image":"svl-artifactory.juniper.net/atom-docker/cn2/trohit7/katafygio:rmvstatus","imagePullPolicy":"IfNotPresent","livenessProbe":{"httpGet":{"path":"/health","port":"http"},"initialDelaySeconds":60,"periodSeconds":10,"timeoutSeconds":10},"name":"katafygio","ports":[{"containerPort":8080,"name":"http","protocol":"TCP"}],"readinessProbe":{"httpGet":{"path":"/health","port":"http"},"initialDelaySeconds":30,"periodSeconds":20,"timeoutSeconds":10},"resources":{},"volumeMounts":[{"mountPath":"/var/lib/katafygio/data","name":"katafygio-data"}]}],"securityContext":{"fsGroup":65534},"serviceAccountName":"katafygio","volumes":[{"name":"katafygio-data","persistentVolumeClaim":{"claimName":"katafygio"}}]}}}}
   creationTimestamp: "2023-12-21T11:24:35Z"
   labels:
     app: katafygio
     chart: katafygio-0.5.1
     heritage: Helm
+    pod-template-hash: 69d46c7d75
     release: katafygio
-  name: katafygio
+  name: katafygio-69d46c7d75
   namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: katafygio
+    uid: 8924f9c1-9b01-4f33-932d-dec66c68fd1c
 spec:
-  progressDeadlineSeconds: 600
   replicas: 1
-  revisionHistoryLimit: 10
   selector:
     matchLabels:
       app: katafygio
+      pod-template-hash: 69d46c7d75
       release: katafygio
-  strategy:
-    type: Recreate
   template:
     metadata:
       creationTimestamp: null
@@ -30,6 +35,7 @@ spec:
         app: katafygio
         chart: katafygio-0.5.1
         heritage: Helm
+        pod-template-hash: 69d46c7d75
         release: katafygio
     spec:
       containers:

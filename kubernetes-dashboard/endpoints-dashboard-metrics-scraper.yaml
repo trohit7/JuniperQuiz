@@ -10,7 +10,7 @@ metadata:
   namespace: kubernetes-dashboard
 subsets:
 - addresses:
-  - ip: 10.244.1.217
+  - ip: 10.244.1.229
     nodeName: minikube
     targetRef:
       kind: Pod

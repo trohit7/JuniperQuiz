@@ -2,7 +2,7 @@ addressType: IPv4
 apiVersion: discovery.k8s.io/v1
 endpoints:
 - addresses:
-  - 10.244.1.217
+  - 10.244.1.229
   conditions:
     ready: true
     serving: true

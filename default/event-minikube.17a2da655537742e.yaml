@@ -1,0 +1,20 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 14
+deprecatedFirstTimestamp: "2023-12-21T13:02:17Z"
+deprecatedLastTimestamp: "2023-12-27T08:53:29Z"
+deprecatedSource:
+  component: kubelet
+  host: minikube
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2023-12-27T08:53:30Z"
+  name: minikube.17a2da655537742e
+  namespace: default
+note: 'Node minikube status is now: NodeReady'
+reason: NodeReady
+regarding:
+  kind: Node
+  name: minikube
+  uid: minikube
+type: Normal
