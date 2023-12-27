@@ -9,4 +9,4 @@ spec:
   holderIdentity: crdstesting-controller-manager-595f599f59-8xm25_18ed6940-74f2-43bc-9a37-70264bb2e2b7
   leaseDurationSeconds: 15
   leaseTransitions: 772
-  renewTime: "2023-12-27T10:13:50.485725Z"
+  renewTime: "2023-12-27T10:14:00.536723Z"
