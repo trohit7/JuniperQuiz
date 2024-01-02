@@ -1,0 +1,21 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: "2024-01-02T08:19:35Z"
+  name: kindnet
+rules:
+- apiGroups:
+  - policy
+  resourceNames:
+  - kindnet
+  resources:
+  - podsecuritypolicies
+  verbs:
+  - use
+- apiGroups:
+  - ""
+  resources:
+  - nodes
+  verbs:
+  - list
+  - watch

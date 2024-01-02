@@ -1,0 +1,180 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2024-01-02T08:19:48Z"
+  generateName: kindnet-
+  labels:
+    app: kindnet
+    controller-revision-hash: d4bd74f4
+    k8s-app: kindnet
+    pod-template-generation: "1"
+    tier: node
+  name: kindnet-w957h
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: kindnet
+    uid: 2819f73d-40a1-4c77-9129-6ea76c98daa3
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchFields:
+          - key: metadata.name
+            operator: In
+            values:
+            - my-cluster-control-plane
+  containers:
+  - env:
+    - name: HOST_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.hostIP
+    - name: POD_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.podIP
+    - name: POD_SUBNET
+      value: 10.244.0.0/16
+    - name: CONTROL_PLANE_ENDPOINT
+      value: my-cluster-control-plane:6443
+    image: docker.io/kindest/kindnetd:v20230511-dc714da8
+    imagePullPolicy: IfNotPresent
+    name: kindnet-cni
+    resources:
+      limits:
+        cpu: 100m
+        memory: 50Mi
+      requests:
+        cpu: 100m
+        memory: 50Mi
+    securityContext:
+      capabilities:
+        add:
+        - NET_RAW
+        - NET_ADMIN
+      privileged: false
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/cni/net.d
+      name: cni-cfg
+    - mountPath: /run/xtables.lock
+      name: xtables-lock
+    - mountPath: /lib/modules
+      name: lib-modules
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-fdl85
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  nodeName: my-cluster-control-plane
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: kindnet
+  serviceAccountName: kindnet
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/disk-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/pid-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/unschedulable
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/network-unavailable
+    operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/cni/net.d
+      type: ""
+    name: cni-cfg
+  - hostPath:
+      path: /run/xtables.lock
+      type: FileOrCreate
+    name: xtables-lock
+  - hostPath:
+      path: /lib/modules
+      type: ""
+    name: lib-modules
+  - name: kube-api-access-fdl85
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-02T08:19:48Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-02T08:19:50Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-02T08:19:50Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-02T08:19:48Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://3c5c053609007e02e92daddc8a5649dfb8259bed1aee09b273a4676cb20b72a4
+    image: docker.io/kindest/kindnetd:v20230511-dc714da8
+    imageID: sha256:b18bf71b941bae2e12db1c07e567ad14e4febbc778310a0fc64487f1ac877d79
+    lastState: {}
+    name: kindnet-cni
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-01-02T08:19:49Z"
+  hostIP: 172.18.0.3
+  phase: Running
+  podIP: 172.18.0.3
+  podIPs:
+  - ip: 172.18.0.3
+  qosClass: Guaranteed
+  startTime: "2024-01-02T08:19:48Z"

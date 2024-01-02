@@ -5,7 +5,7 @@ metadata:
     deployment.kubernetes.io/revision: "1"
     kubectl.kubernetes.io/last-applied-configuration: |
       {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"app":"katafygio","chart":"katafygio-0.5.1","heritage":"Helm","release":"katafygio"},"name":"katafygio","namespace":"default"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"katafygio","release":"katafygio"}},"strategy":{"type":"Recreate"},"template":{"metadata":{"labels":{"app":"katafygio","chart":"katafygio-0.5.1","heritage":"Helm","release":"katafygio"}},"spec":{"containers":[{"args":["--local-dir=/var/lib/katafygio/data","--healthcheck-port=8080","--log-level=info","--log-output=stdout","--resync-interval=300","--exclude-kind=replicasets","--exclude-kind=endpoints","--exclude-kind=events"],"image":"svl-artifactory.juniper.net/atom-docker/cn2/trohit7/katafygio:rmvstatus","imagePullPolicy":"IfNotPresent","livenessProbe":{"httpGet":{"path":"/health","port":"http"},"initialDelaySeconds":60,"periodSeconds":10,"timeoutSeconds":10},"name":"katafygio","ports":[{"containerPort":8080,"name":"http","protocol":"TCP"}],"readinessProbe":{"httpGet":{"path":"/health","port":"http"},"initialDelaySeconds":30,"periodSeconds":20,"timeoutSeconds":10},"resources":{},"volumeMounts":[{"mountPath":"/var/lib/katafygio/data","name":"katafygio-data"}]}],"securityContext":{"fsGroup":65534},"serviceAccountName":"katafygio","volumes":[{"name":"katafygio-data","persistentVolumeClaim":{"claimName":"katafygio"}}]}}}}
-  creationTimestamp: "2023-12-21T11:24:35Z"
+  creationTimestamp: "2024-01-02T08:19:50Z"
   labels:
     app: katafygio
     chart: katafygio-0.5.1
@@ -90,18 +90,18 @@ spec:
 status:
   availableReplicas: 1
   conditions:
-  - lastTransitionTime: "2023-12-21T11:24:35Z"
-    lastUpdateTime: "2023-12-21T11:25:16Z"
-    message: ReplicaSet "katafygio-69d46c7d75" has successfully progressed.
-    reason: NewReplicaSetAvailable
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2024-01-02T04:35:27Z"
-    lastUpdateTime: "2024-01-02T04:35:27Z"
+  - lastTransitionTime: "2024-01-02T08:20:56Z"
+    lastUpdateTime: "2024-01-02T08:20:56Z"
     message: Deployment has minimum availability.
     reason: MinimumReplicasAvailable
     status: "True"
     type: Available
+  - lastTransitionTime: "2024-01-02T08:19:50Z"
+    lastUpdateTime: "2024-01-02T08:20:56Z"
+    message: ReplicaSet "katafygio-69d46c7d75" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
   observedGeneration: 1
   readyReplicas: 1
   replicas: 1

@@ -1,0 +1,25 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-02T08:19:48Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: coredns-5d78c9869d-j647f
+  namespace: kube-system
+  resourceVersion: "365"
+  uid: ce55b6fa-3376-4440-8a65-3708e8faf660
+kind: Event
+lastTimestamp: "2024-01-02T08:19:48Z"
+message: '0/1 nodes are available: 1 node(s) had untolerated taint {node.kubernetes.io/not-ready:
+  }. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..'
+metadata:
+  creationTimestamp: "2024-01-02T08:19:48Z"
+  name: coredns-5d78c9869d-j647f.17a679f1e1463673
+  namespace: kube-system
+reason: FailedScheduling
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: default-scheduler
+type: Warning

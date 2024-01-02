@@ -1,0 +1,84 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2024-01-02T08:19:48Z"
+  labels:
+    app: local-path-provisioner
+    pod-template-hash: 6bc4bddd6b
+  name: local-path-provisioner-6bc4bddd6b
+  namespace: local-path-storage
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: local-path-provisioner
+    uid: 6ab1e683-587f-4dcb-a783-65251372cbcb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: local-path-provisioner
+      pod-template-hash: 6bc4bddd6b
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: local-path-provisioner
+        pod-template-hash: 6bc4bddd6b
+    spec:
+      containers:
+      - command:
+        - local-path-provisioner
+        - --debug
+        - start
+        - --helper-image
+        - docker.io/kindest/local-path-helper:v20230510-486859a6
+        - --config
+        - /etc/config/config.json
+        env:
+        - name: POD_NAMESPACE
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+        image: docker.io/kindest/local-path-provisioner:v20230511-dc714da8
+        imagePullPolicy: IfNotPresent
+        name: local-path-provisioner
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /etc/config/
+          name: config-volume
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        kubernetes.io/os: linux
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: local-path-provisioner-service-account
+      serviceAccountName: local-path-provisioner-service-account
+      terminationGracePeriodSeconds: 30
+      tolerations:
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/control-plane
+        operator: Equal
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/master
+        operator: Equal
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: local-path-config
+        name: config-volume
+status:
+  availableReplicas: 1
+  fullyLabeledReplicas: 1
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1

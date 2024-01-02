@@ -1,0 +1,24 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-02T08:19:55Z"
+involvedObject:
+  apiVersion: v1
+  kind: PersistentVolumeClaim
+  name: katafygio
+  namespace: default
+  resourceVersion: "458"
+  uid: fa7c5ec2-f903-4a33-92e1-93e31f0f7465
+kind: Event
+lastTimestamp: "2024-01-02T08:19:55Z"
+message: Successfully provisioned volume pvc-fa7c5ec2-f903-4a33-92e1-93e31f0f7465
+metadata:
+  creationTimestamp: "2024-01-02T08:19:55Z"
+  name: katafygio.17a679f37148a9a4
+  namespace: default
+reason: ProvisioningSucceeded
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: rancher.io/local-path_local-path-provisioner-6bc4bddd6b-zmqqp_ed7ce874-c7a8-496e-b55d-71d39ea8ac65
+type: Normal

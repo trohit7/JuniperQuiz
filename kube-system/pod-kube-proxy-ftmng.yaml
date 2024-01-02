@@ -1,0 +1,164 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2024-01-02T08:19:48Z"
+  generateName: kube-proxy-
+  labels:
+    controller-revision-hash: 56999f657b
+    k8s-app: kube-proxy
+    pod-template-generation: "1"
+  name: kube-proxy-ftmng
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: kube-proxy
+    uid: 57993dee-5030-43dc-9b01-c12c4560d2e7
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchFields:
+          - key: metadata.name
+            operator: In
+            values:
+            - my-cluster-control-plane
+  containers:
+  - command:
+    - /usr/local/bin/kube-proxy
+    - --config=/var/lib/kube-proxy/config.conf
+    - --hostname-override=$(NODE_NAME)
+    env:
+    - name: NODE_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.nodeName
+    image: registry.k8s.io/kube-proxy:v1.27.3
+    imagePullPolicy: IfNotPresent
+    name: kube-proxy
+    resources: {}
+    securityContext:
+      privileged: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/lib/kube-proxy
+      name: kube-proxy
+    - mountPath: /run/xtables.lock
+      name: xtables-lock
+    - mountPath: /lib/modules
+      name: lib-modules
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-zmzkt
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  nodeName: my-cluster-control-plane
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: kube-proxy
+  serviceAccountName: kube-proxy
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/disk-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/pid-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/unschedulable
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/network-unavailable
+    operator: Exists
+  volumes:
+  - configMap:
+      defaultMode: 420
+      name: kube-proxy
+    name: kube-proxy
+  - hostPath:
+      path: /run/xtables.lock
+      type: FileOrCreate
+    name: xtables-lock
+  - hostPath:
+      path: /lib/modules
+      type: ""
+    name: lib-modules
+  - name: kube-api-access-zmzkt
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-02T08:19:48Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-02T08:19:50Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-02T08:19:50Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-02T08:19:48Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://7345db18a600df4371ea87c6da16a6c65ddd6740b37bf3f225df2abc60f004d2
+    image: registry.k8s.io/kube-proxy:v1.27.3
+    imageID: docker.io/library/import-2023-06-15@sha256:67c927df0c79fb7415d0fc925570687fbec9a36cf13145a6430f9da059965dad
+    lastState: {}
+    name: kube-proxy
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-01-02T08:19:49Z"
+  hostIP: 172.18.0.3
+  phase: Running
+  podIP: 172.18.0.3
+  podIPs:
+  - ip: 172.18.0.3
+  qosClass: BestEffort
+  startTime: "2024-01-02T08:19:48Z"

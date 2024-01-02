@@ -1,0 +1,26 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-02T08:19:51Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{local-path-provisioner}
+  kind: Pod
+  name: local-path-provisioner-6bc4bddd6b-zmqqp
+  namespace: local-path-storage
+  resourceVersion: "419"
+  uid: 49f29e24-d847-4f83-82b4-db033edb13f6
+kind: Event
+lastTimestamp: "2024-01-02T08:19:51Z"
+message: Started container local-path-provisioner
+metadata:
+  creationTimestamp: "2024-01-02T08:19:51Z"
+  name: local-path-provisioner-6bc4bddd6b-zmqqp.17a679f28354bc6c
+  namespace: local-path-storage
+reason: Started
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: my-cluster-control-plane
+type: Normal

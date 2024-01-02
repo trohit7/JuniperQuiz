@@ -1,0 +1,24 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-02T08:19:48Z"
+involvedObject:
+  apiVersion: apps/v1
+  kind: Deployment
+  name: local-path-provisioner
+  namespace: local-path-storage
+  resourceVersion: "272"
+  uid: 6ab1e683-587f-4dcb-a783-65251372cbcb
+kind: Event
+lastTimestamp: "2024-01-02T08:19:48Z"
+message: Scaled up replica set local-path-provisioner-6bc4bddd6b to 1
+metadata:
+  creationTimestamp: "2024-01-02T08:19:48Z"
+  name: local-path-provisioner.17a679f1cf8ab86c
+  namespace: local-path-storage
+reason: ScalingReplicaSet
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: deployment-controller
+type: Normal

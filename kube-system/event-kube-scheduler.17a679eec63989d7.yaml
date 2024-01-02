@@ -1,0 +1,24 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-02T08:19:35Z"
+involvedObject:
+  apiVersion: coordination.k8s.io/v1
+  kind: Lease
+  name: kube-scheduler
+  namespace: kube-system
+  resourceVersion: "263"
+  uid: 60032f3d-c584-42a1-8584-5216b5ec554a
+kind: Event
+lastTimestamp: "2024-01-02T08:19:35Z"
+message: my-cluster-control-plane_0d38213f-3ff9-40b0-8699-042994debd5c became leader
+metadata:
+  creationTimestamp: "2024-01-02T08:19:35Z"
+  name: kube-scheduler.17a679eec63989d7
+  namespace: kube-system
+reason: LeaderElection
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: default-scheduler
+type: Normal

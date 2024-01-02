@@ -1,0 +1,26 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-02T08:19:52Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{helper-pod}
+  kind: Pod
+  name: helper-pod-create-pvc-fa7c5ec2-f903-4a33-92e1-93e31f0f7465
+  namespace: local-path-storage
+  resourceVersion: "462"
+  uid: c0c1e917-a3d7-4bdc-b880-9fa04c140639
+kind: Event
+lastTimestamp: "2024-01-02T08:19:52Z"
+message: Started container helper-pod
+metadata:
+  creationTimestamp: "2024-01-02T08:19:52Z"
+  name: helper-pod-create-pvc-fa7c5ec2-f903-4a33-92e1-93e31f0f7465.17a679f2daf7ba02
+  namespace: local-path-storage
+reason: Started
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: my-cluster-control-plane
+type: Normal

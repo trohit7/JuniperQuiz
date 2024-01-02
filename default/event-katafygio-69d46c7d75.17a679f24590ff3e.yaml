@@ -1,0 +1,24 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-02T08:19:50Z"
+involvedObject:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: katafygio-69d46c7d75
+  namespace: default
+  resourceVersion: "403"
+  uid: 5855931d-322e-457c-8c04-ca444ecfe2a1
+kind: Event
+lastTimestamp: "2024-01-02T08:19:50Z"
+message: 'Created pod: katafygio-69d46c7d75-zlxr8'
+metadata:
+  creationTimestamp: "2024-01-02T08:19:50Z"
+  name: katafygio-69d46c7d75.17a679f24590ff3e
+  namespace: default
+reason: SuccessfulCreate
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: replicaset-controller
+type: Normal

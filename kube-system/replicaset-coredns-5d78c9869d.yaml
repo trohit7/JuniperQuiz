@@ -2,10 +2,10 @@ apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   annotations:
-    deployment.kubernetes.io/desired-replicas: "1"
-    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/desired-replicas: "2"
+    deployment.kubernetes.io/max-replicas: "3"
     deployment.kubernetes.io/revision: "1"
-  creationTimestamp: "2023-11-21T12:47:31Z"
+  creationTimestamp: "2024-01-02T08:19:48Z"
   labels:
     k8s-app: kube-dns
     pod-template-hash: 5d78c9869d
@@ -17,9 +17,9 @@ metadata:
     controller: true
     kind: Deployment
     name: coredns
-    uid: 3a31e884-6248-49fa-b10b-8a0da3e7603d
+    uid: 6e9d3ea3-f366-4f36-a495-e2c6510e0478
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       k8s-app: kube-dns
@@ -123,8 +123,8 @@ spec:
           name: coredns
         name: config-volume
 status:
-  availableReplicas: 1
-  fullyLabeledReplicas: 1
+  availableReplicas: 2
+  fullyLabeledReplicas: 2
   observedGeneration: 1
-  readyReplicas: 1
-  replicas: 1
+  readyReplicas: 2
+  replicas: 2

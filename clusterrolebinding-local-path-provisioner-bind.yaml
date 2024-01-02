@@ -1,0 +1,16 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"rbac.authorization.k8s.io/v1","kind":"ClusterRoleBinding","metadata":{"annotations":{},"name":"local-path-provisioner-bind"},"roleRef":{"apiGroup":"rbac.authorization.k8s.io","kind":"ClusterRole","name":"local-path-provisioner-role"},"subjects":[{"kind":"ServiceAccount","name":"local-path-provisioner-service-account","namespace":"local-path-storage"}]}
+  creationTimestamp: "2024-01-02T08:19:35Z"
+  name: local-path-provisioner-bind
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: local-path-provisioner-role
+subjects:
+- kind: ServiceAccount
+  name: local-path-provisioner-service-account
+  namespace: local-path-storage

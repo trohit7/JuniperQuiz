@@ -1,0 +1,37 @@
+apiVersion: v1
+data:
+  config.json: |-
+    {
+            "nodePathMap":[
+            {
+                    "node":"DEFAULT_PATH_FOR_NON_LISTED_NODES",
+                    "paths":["/var/local-path-provisioner"]
+            }
+            ]
+    }
+  helperPod.yaml: |-
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: helper-pod
+    spec:
+      containers:
+      - name: helper-pod
+        image: docker.io/kindest/local-path-helper:v20230510-486859a6
+        imagePullPolicy: IfNotPresent
+  setup: |-
+    #!/bin/sh
+    set -eu
+    mkdir -m 0777 -p "$VOL_DIR"
+  teardown: |-
+    #!/bin/sh
+    set -eu
+    rm -rf "$VOL_DIR"
+kind: ConfigMap
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{"config.json":"{\n        \"nodePathMap\":[\n        {\n                \"node\":\"DEFAULT_PATH_FOR_NON_LISTED_NODES\",\n                \"paths\":[\"/var/local-path-provisioner\"]\n        }\n        ]\n}","helperPod.yaml":"apiVersion: v1\nkind: Pod\nmetadata:\n  name: helper-pod\nspec:\n  containers:\n  - name: helper-pod\n    image: docker.io/kindest/local-path-helper:v20230510-486859a6\n    imagePullPolicy: IfNotPresent","setup":"#!/bin/sh\nset -eu\nmkdir -m 0777 -p \"$VOL_DIR\"","teardown":"#!/bin/sh\nset -eu\nrm -rf \"$VOL_DIR\""},"kind":"ConfigMap","metadata":{"annotations":{},"name":"local-path-config","namespace":"local-path-storage"}}
+  creationTimestamp: "2024-01-02T08:19:35Z"
+  name: local-path-config
+  namespace: local-path-storage

@@ -1,0 +1,26 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-02T08:19:49Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{kindnet-cni}
+  kind: Pod
+  name: kindnet-w957h
+  namespace: kube-system
+  resourceVersion: "356"
+  uid: 741f20d0-fe57-4ea3-b813-5da3f97cce65
+kind: Event
+lastTimestamp: "2024-01-02T08:19:49Z"
+message: Started container kindnet-cni
+metadata:
+  creationTimestamp: "2024-01-02T08:19:49Z"
+  name: kindnet-w957h.17a679f21fc908f2
+  namespace: kube-system
+reason: Started
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: my-cluster-control-plane
+type: Normal

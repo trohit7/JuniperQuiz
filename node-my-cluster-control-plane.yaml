@@ -1,0 +1,124 @@
+apiVersion: v1
+kind: Node
+metadata:
+  annotations:
+    kubeadm.alpha.kubernetes.io/cri-socket: unix:///run/containerd/containerd.sock
+    node.alpha.kubernetes.io/ttl: "0"
+    volumes.kubernetes.io/controller-managed-attach-detach: "true"
+  creationTimestamp: "2024-01-02T08:19:31Z"
+  labels:
+    beta.kubernetes.io/arch: arm64
+    beta.kubernetes.io/os: linux
+    kubernetes.io/arch: arm64
+    kubernetes.io/hostname: my-cluster-control-plane
+    kubernetes.io/os: linux
+    node-role.kubernetes.io/control-plane: ""
+    node.kubernetes.io/exclude-from-external-load-balancers: ""
+  name: my-cluster-control-plane
+spec:
+  podCIDR: 10.244.0.0/24
+  podCIDRs:
+  - 10.244.0.0/24
+  providerID: kind://docker/my-cluster/my-cluster-control-plane
+status:
+  addresses:
+  - address: 172.18.0.3
+    type: InternalIP
+  - address: my-cluster-control-plane
+    type: Hostname
+  allocatable:
+    cpu: "5"
+    ephemeral-storage: 61202244Ki
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    hugepages-32Mi: "0"
+    hugepages-64Ki: "0"
+    memory: 8039872Ki
+    pods: "110"
+  capacity:
+    cpu: "5"
+    ephemeral-storage: 61202244Ki
+    hugepages-1Gi: "0"
+    hugepages-2Mi: "0"
+    hugepages-32Mi: "0"
+    hugepages-64Ki: "0"
+    memory: 8039872Ki
+    pods: "110"
+  conditions:
+  - lastHeartbeatTime: "2024-01-02T08:20:35Z"
+    lastTransitionTime: "2024-01-02T08:19:29Z"
+    message: kubelet has sufficient memory available
+    reason: KubeletHasSufficientMemory
+    status: "False"
+    type: MemoryPressure
+  - lastHeartbeatTime: "2024-01-02T08:20:35Z"
+    lastTransitionTime: "2024-01-02T08:19:29Z"
+    message: kubelet has no disk pressure
+    reason: KubeletHasNoDiskPressure
+    status: "False"
+    type: DiskPressure
+  - lastHeartbeatTime: "2024-01-02T08:20:35Z"
+    lastTransitionTime: "2024-01-02T08:19:29Z"
+    message: kubelet has sufficient PID available
+    reason: KubeletHasSufficientPID
+    status: "False"
+    type: PIDPressure
+  - lastHeartbeatTime: "2024-01-02T08:20:35Z"
+    lastTransitionTime: "2024-01-02T08:19:50Z"
+    message: kubelet is posting ready status
+    reason: KubeletReady
+    status: "True"
+    type: Ready
+  daemonEndpoints:
+    kubeletEndpoint:
+      Port: 10250
+  images:
+  - names:
+    - registry.k8s.io/etcd:3.5.7-0
+    sizeBytes: 80665728
+  - names:
+    - docker.io/library/import-2023-06-15@sha256:024134bb4e61a4975c5c15db76a7e3571eea74eff90c12a730781bf9c9daedd0
+    - registry.k8s.io/kube-apiserver:v1.27.3
+    sizeBytes: 79827455
+  - names:
+    - docker.io/library/import-2023-06-15@sha256:336af6020e6377f586577425f1314d95067a9b4a1c8707e90d5062823ec03f43
+    - registry.k8s.io/kube-controller-manager:v1.27.3
+    sizeBytes: 71504013
+  - names:
+    - docker.io/library/import-2023-06-15@sha256:67c927df0c79fb7415d0fc925570687fbec9a36cf13145a6430f9da059965dad
+    - registry.k8s.io/kube-proxy:v1.27.3
+    sizeBytes: 68097533
+  - names:
+    - docker.io/library/import-2023-06-15@sha256:4b3d947dd06f4f5e4f417ec4da4bc83017f7cb5387d053ea2b6b906825011b7c
+    - registry.k8s.io/kube-scheduler:v1.27.3
+    sizeBytes: 57610381
+  - names:
+    - svl-artifactory.juniper.net/atom-docker/cn2/trohit7/katafygio@sha256:c354c3ce537803d6e2afc20d8da3b79b5809c53411fa7719e2dec1859192b92c
+    - svl-artifactory.juniper.net/atom-docker/cn2/trohit7/katafygio:rmvstatus
+    sizeBytes: 30945856
+  - names:
+    - docker.io/kindest/kindnetd:v20230511-dc714da8
+    sizeBytes: 25334607
+  - names:
+    - docker.io/kindest/local-path-provisioner:v20230511-dc714da8
+    sizeBytes: 17275248
+  - names:
+    - registry.k8s.io/coredns/coredns:v1.10.1
+    sizeBytes: 14557471
+  - names:
+    - docker.io/kindest/local-path-helper:v20230510-486859a6
+    sizeBytes: 2922287
+  - names:
+    - registry.k8s.io/pause:3.7
+    sizeBytes: 268400
+  nodeInfo:
+    architecture: arm64
+    bootID: 3e78bab1-8a38-4e13-a385-178533d1a015
+    containerRuntimeVersion: containerd://1.7.1
+    kernelVersion: 5.15.49-linuxkit-pr
+    kubeProxyVersion: v1.27.3
+    kubeletVersion: v1.27.3
+    machineID: 1672215ea6894bc49fdfb066a6306829
+    operatingSystem: linux
+    osImage: Debian GNU/Linux 11 (bullseye)
+    systemUUID: 1672215ea6894bc49fdfb066a6306829

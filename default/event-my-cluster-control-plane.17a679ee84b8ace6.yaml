@@ -1,0 +1,22 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-02T08:19:34Z"
+involvedObject:
+  kind: Node
+  name: my-cluster-control-plane
+  uid: my-cluster-control-plane
+kind: Event
+lastTimestamp: "2024-01-02T08:19:34Z"
+message: Starting kubelet.
+metadata:
+  creationTimestamp: "2024-01-02T08:19:34Z"
+  name: my-cluster-control-plane.17a679ee84b8ace6
+  namespace: default
+reason: Starting
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: my-cluster-control-plane
+type: Normal

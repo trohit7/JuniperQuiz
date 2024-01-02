@@ -1,0 +1,24 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-02T08:19:56Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: katafygio-69d46c7d75-zlxr8
+  namespace: default
+  resourceVersion: "410"
+  uid: 9824e9ef-864f-4b9b-b35c-01eda40167a3
+kind: Event
+lastTimestamp: "2024-01-02T08:19:56Z"
+message: Successfully assigned default/katafygio-69d46c7d75-zlxr8 to my-cluster-control-plane
+metadata:
+  creationTimestamp: "2024-01-02T08:19:56Z"
+  name: katafygio-69d46c7d75-zlxr8.17a679f3ab9e293b
+  namespace: default
+reason: Scheduled
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: default-scheduler
+type: Normal

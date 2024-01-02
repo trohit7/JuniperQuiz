@@ -1,0 +1,175 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kubernetes.io/config.hash: f028b78f05e4b28fc1c9900c7e45e2ea
+    kubernetes.io/config.mirror: f028b78f05e4b28fc1c9900c7e45e2ea
+    kubernetes.io/config.seen: "2024-01-02T08:19:34.345855958Z"
+    kubernetes.io/config.source: file
+  creationTimestamp: "2024-01-02T08:19:34Z"
+  labels:
+    component: kube-controller-manager
+    tier: control-plane
+  name: kube-controller-manager-my-cluster-control-plane
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: v1
+    controller: true
+    kind: Node
+    name: my-cluster-control-plane
+    uid: bc3ad3e8-065b-4530-8729-342ec2db188f
+spec:
+  containers:
+  - command:
+    - kube-controller-manager
+    - --allocate-node-cidrs=true
+    - --authentication-kubeconfig=/etc/kubernetes/controller-manager.conf
+    - --authorization-kubeconfig=/etc/kubernetes/controller-manager.conf
+    - --bind-address=127.0.0.1
+    - --client-ca-file=/etc/kubernetes/pki/ca.crt
+    - --cluster-cidr=10.244.0.0/16
+    - --cluster-name=my-cluster
+    - --cluster-signing-cert-file=/etc/kubernetes/pki/ca.crt
+    - --cluster-signing-key-file=/etc/kubernetes/pki/ca.key
+    - --controllers=*,bootstrapsigner,tokencleaner
+    - --enable-hostpath-provisioner=true
+    - --kubeconfig=/etc/kubernetes/controller-manager.conf
+    - --leader-elect=true
+    - --requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt
+    - --root-ca-file=/etc/kubernetes/pki/ca.crt
+    - --service-account-private-key-file=/etc/kubernetes/pki/sa.key
+    - --service-cluster-ip-range=10.96.0.0/16
+    - --use-service-account-credentials=true
+    image: registry.k8s.io/kube-controller-manager:v1.27.3
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 8
+      httpGet:
+        host: 127.0.0.1
+        path: /healthz
+        port: 10257
+        scheme: HTTPS
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 15
+    name: kube-controller-manager
+    resources:
+      requests:
+        cpu: 200m
+    startupProbe:
+      failureThreshold: 24
+      httpGet:
+        host: 127.0.0.1
+        path: /healthz
+        port: 10257
+        scheme: HTTPS
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 15
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/ssl/certs
+      name: ca-certs
+      readOnly: true
+    - mountPath: /etc/ca-certificates
+      name: etc-ca-certificates
+      readOnly: true
+    - mountPath: /usr/libexec/kubernetes/kubelet-plugins/volume/exec
+      name: flexvolume-dir
+    - mountPath: /etc/kubernetes/pki
+      name: k8s-certs
+      readOnly: true
+    - mountPath: /etc/kubernetes/controller-manager.conf
+      name: kubeconfig
+      readOnly: true
+    - mountPath: /usr/local/share/ca-certificates
+      name: usr-local-share-ca-certificates
+      readOnly: true
+    - mountPath: /usr/share/ca-certificates
+      name: usr-share-ca-certificates
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostNetwork: true
+  nodeName: my-cluster-control-plane
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000001000
+  priorityClassName: system-node-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    seccompProfile:
+      type: RuntimeDefault
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/ssl/certs
+      type: DirectoryOrCreate
+    name: ca-certs
+  - hostPath:
+      path: /etc/ca-certificates
+      type: DirectoryOrCreate
+    name: etc-ca-certificates
+  - hostPath:
+      path: /usr/libexec/kubernetes/kubelet-plugins/volume/exec
+      type: DirectoryOrCreate
+    name: flexvolume-dir
+  - hostPath:
+      path: /etc/kubernetes/pki
+      type: DirectoryOrCreate
+    name: k8s-certs
+  - hostPath:
+      path: /etc/kubernetes/controller-manager.conf
+      type: FileOrCreate
+    name: kubeconfig
+  - hostPath:
+      path: /usr/local/share/ca-certificates
+      type: DirectoryOrCreate
+    name: usr-local-share-ca-certificates
+  - hostPath:
+      path: /usr/share/ca-certificates
+      type: DirectoryOrCreate
+    name: usr-share-ca-certificates
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-02T08:19:34Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-02T08:19:44Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-02T08:19:44Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-02T08:19:34Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://91c7c69456b331eee76cd66da495c4030f4ccf89f497189e8c0b5e62730a6f89
+    image: registry.k8s.io/kube-controller-manager:v1.27.3
+    imageID: docker.io/library/import-2023-06-15@sha256:336af6020e6377f586577425f1314d95067a9b4a1c8707e90d5062823ec03f43
+    lastState: {}
+    name: kube-controller-manager
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-01-02T08:19:29Z"
+  hostIP: 172.18.0.3
+  phase: Running
+  podIP: 172.18.0.3
+  podIPs:
+  - ip: 172.18.0.3
+  qosClass: Burstable
+  startTime: "2024-01-02T08:19:34Z"

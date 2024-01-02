@@ -1,0 +1,14 @@
+apiVersion: storage.k8s.io/v1
+kind: CSINode
+metadata:
+  annotations:
+    storage.alpha.kubernetes.io/migrated-plugins: kubernetes.io/aws-ebs,kubernetes.io/azure-disk,kubernetes.io/azure-file,kubernetes.io/cinder,kubernetes.io/gce-pd,kubernetes.io/vsphere-volume
+  creationTimestamp: "2024-01-02T08:19:31Z"
+  name: my-cluster-control-plane
+  ownerReferences:
+  - apiVersion: v1
+    kind: Node
+    name: my-cluster-control-plane
+    uid: bc3ad3e8-065b-4530-8729-342ec2db188f
+spec:
+  drivers: null

@@ -1,0 +1,25 @@
+apiVersion: v1
+count: 2
+eventTime: null
+firstTimestamp: "2024-01-02T08:19:52Z"
+involvedObject:
+  apiVersion: v1
+  kind: PersistentVolumeClaim
+  name: katafygio
+  namespace: default
+  resourceVersion: "458"
+  uid: fa7c5ec2-f903-4a33-92e1-93e31f0f7465
+kind: Event
+lastTimestamp: "2024-01-02T08:19:52Z"
+message: waiting for a volume to be created, either by external provisioner "rancher.io/local-path"
+  or manually created by system administrator
+metadata:
+  creationTimestamp: "2024-01-02T08:19:52Z"
+  name: katafygio.17a679f2bcc5c7f6
+  namespace: default
+reason: ExternalProvisioning
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: persistentvolume-controller
+type: Normal

@@ -1,0 +1,19 @@
+action: StartKubeProxy
+apiVersion: v1
+eventTime: "2024-01-02T08:19:49.504074Z"
+firstTimestamp: null
+involvedObject:
+  kind: Node
+  name: my-cluster-control-plane
+  uid: my-cluster-control-plane
+kind: Event
+lastTimestamp: null
+metadata:
+  creationTimestamp: "2024-01-02T08:19:49Z"
+  name: my-cluster-control-plane.17a679f20c70c894
+  namespace: default
+reason: Starting
+reportingComponent: kube-proxy
+reportingInstance: kube-proxy-my-cluster-control-plane
+source: {}
+type: Normal

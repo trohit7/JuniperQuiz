@@ -1,7 +1,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  creationTimestamp: "2023-11-21T12:47:18Z"
+  creationTimestamp: "2024-01-02T08:19:34Z"
   name: kubeadm:node-autoapprove-certificate-rotation
 roleRef:
   apiGroup: rbac.authorization.k8s.io

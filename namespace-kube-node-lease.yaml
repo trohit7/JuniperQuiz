@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  creationTimestamp: "2023-11-21T12:47:14Z"
+  creationTimestamp: "2024-01-02T08:19:31Z"
   labels:
     kubernetes.io/metadata.name: kube-node-lease
   name: kube-node-lease

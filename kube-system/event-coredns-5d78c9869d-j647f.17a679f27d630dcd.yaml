@@ -1,0 +1,27 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-02T08:19:51Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{coredns}
+  kind: Pod
+  name: coredns-5d78c9869d-j647f
+  namespace: kube-system
+  resourceVersion: "417"
+  uid: ce55b6fa-3376-4440-8a65-3708e8faf660
+kind: Event
+lastTimestamp: "2024-01-02T08:19:51Z"
+message: 'Readiness probe failed: Get "http://10.244.0.2:8181/ready": dial tcp 10.244.0.2:8181:
+  connect: connection refused'
+metadata:
+  creationTimestamp: "2024-01-02T08:19:51Z"
+  name: coredns-5d78c9869d-j647f.17a679f27d630dcd
+  namespace: kube-system
+reason: Unhealthy
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: my-cluster-control-plane
+type: Warning

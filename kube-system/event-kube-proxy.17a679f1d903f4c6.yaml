@@ -1,0 +1,24 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-02T08:19:48Z"
+involvedObject:
+  apiVersion: apps/v1
+  kind: DaemonSet
+  name: kube-proxy
+  namespace: kube-system
+  resourceVersion: "221"
+  uid: 57993dee-5030-43dc-9b01-c12c4560d2e7
+kind: Event
+lastTimestamp: "2024-01-02T08:19:48Z"
+message: 'Created pod: kube-proxy-ftmng'
+metadata:
+  creationTimestamp: "2024-01-02T08:19:48Z"
+  name: kube-proxy.17a679f1d903f4c6
+  namespace: kube-system
+reason: SuccessfulCreate
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: daemonset-controller
+type: Normal

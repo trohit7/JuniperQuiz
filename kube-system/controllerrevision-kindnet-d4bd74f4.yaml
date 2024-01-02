@@ -1,0 +1,99 @@
+apiVersion: apps/v1
+data:
+  spec:
+    template:
+      $patch: replace
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: kindnet
+          k8s-app: kindnet
+          tier: node
+      spec:
+        containers:
+        - env:
+          - name: HOST_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.hostIP
+          - name: POD_IP
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: status.podIP
+          - name: POD_SUBNET
+            value: 10.244.0.0/16
+          - name: CONTROL_PLANE_ENDPOINT
+            value: my-cluster-control-plane:6443
+          image: docker.io/kindest/kindnetd:v20230511-dc714da8
+          imagePullPolicy: IfNotPresent
+          name: kindnet-cni
+          resources:
+            limits:
+              cpu: 100m
+              memory: 50Mi
+            requests:
+              cpu: 100m
+              memory: 50Mi
+          securityContext:
+            capabilities:
+              add:
+              - NET_RAW
+              - NET_ADMIN
+            privileged: false
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /etc/cni/net.d
+            name: cni-cfg
+          - mountPath: /run/xtables.lock
+            name: xtables-lock
+          - mountPath: /lib/modules
+            name: lib-modules
+            readOnly: true
+        dnsPolicy: ClusterFirst
+        hostNetwork: true
+        nodeSelector:
+          kubernetes.io/os: linux
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: kindnet
+        serviceAccountName: kindnet
+        terminationGracePeriodSeconds: 30
+        tolerations:
+        - operator: Exists
+        volumes:
+        - hostPath:
+            path: /etc/cni/net.d
+            type: ""
+          name: cni-cfg
+        - hostPath:
+            path: /run/xtables.lock
+            type: FileOrCreate
+          name: xtables-lock
+        - hostPath:
+            path: /lib/modules
+            type: ""
+          name: lib-modules
+kind: ControllerRevision
+metadata:
+  annotations:
+    deprecated.daemonset.template.generation: "1"
+  creationTimestamp: "2024-01-02T08:19:48Z"
+  labels:
+    app: kindnet
+    controller-revision-hash: d4bd74f4
+    k8s-app: kindnet
+    tier: node
+  name: kindnet-d4bd74f4
+  namespace: kube-system
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: kindnet
+    uid: 2819f73d-40a1-4c77-9129-6ea76c98daa3
+revision: 1

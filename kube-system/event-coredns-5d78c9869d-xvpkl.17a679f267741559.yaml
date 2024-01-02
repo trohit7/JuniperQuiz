@@ -1,0 +1,27 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-02T08:19:51Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{coredns}
+  kind: Pod
+  name: coredns-5d78c9869d-xvpkl
+  namespace: kube-system
+  resourceVersion: "418"
+  uid: ef435fd2-89f6-4dde-9b5e-70f5d91db506
+kind: Event
+lastTimestamp: "2024-01-02T08:19:51Z"
+message: Container image "registry.k8s.io/coredns/coredns:v1.10.1" already present
+  on machine
+metadata:
+  creationTimestamp: "2024-01-02T08:19:51Z"
+  name: coredns-5d78c9869d-xvpkl.17a679f267741559
+  namespace: kube-system
+reason: Pulled
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: my-cluster-control-plane
+type: Normal

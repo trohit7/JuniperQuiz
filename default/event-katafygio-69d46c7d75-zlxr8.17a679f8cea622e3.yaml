@@ -1,0 +1,26 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-02T08:20:18Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{katafygio}
+  kind: Pod
+  name: katafygio-69d46c7d75-zlxr8
+  namespace: default
+  resourceVersion: "487"
+  uid: 9824e9ef-864f-4b9b-b35c-01eda40167a3
+kind: Event
+lastTimestamp: "2024-01-02T08:20:18Z"
+message: Created container katafygio
+metadata:
+  creationTimestamp: "2024-01-02T08:20:18Z"
+  name: katafygio-69d46c7d75-zlxr8.17a679f8cea622e3
+  namespace: default
+reason: Created
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: my-cluster-control-plane
+type: Normal

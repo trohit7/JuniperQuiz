@@ -1,0 +1,24 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-02T08:19:48Z"
+involvedObject:
+  apiVersion: apps/v1
+  kind: ReplicaSet
+  name: coredns-5d78c9869d
+  namespace: kube-system
+  resourceVersion: "340"
+  uid: dcc3f1d9-fc63-4e96-8dff-fd0e4166a6cb
+kind: Event
+lastTimestamp: "2024-01-02T08:19:48Z"
+message: 'Created pod: coredns-5d78c9869d-j647f'
+metadata:
+  creationTimestamp: "2024-01-02T08:19:48Z"
+  name: coredns-5d78c9869d.17a679f1e13d625c
+  namespace: kube-system
+reason: SuccessfulCreate
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: replicaset-controller
+type: Normal
