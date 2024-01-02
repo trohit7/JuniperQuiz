@@ -12,4 +12,4 @@ metadata:
 spec:
   holderIdentity: my-cluster-control-plane
   leaseDurationSeconds: 40
-  renewTime: "2024-01-02T08:22:07.497170Z"
+  renewTime: "2024-01-02T08:22:17.771126Z"
