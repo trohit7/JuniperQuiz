@@ -16,3 +16,4 @@ spec:
         queues: 16
       type: Queue
   type: Limited
+status: {}
