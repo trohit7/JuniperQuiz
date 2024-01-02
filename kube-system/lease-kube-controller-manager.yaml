@@ -9,4 +9,4 @@ spec:
   holderIdentity: my-cluster-control-plane_ad574f63-fde3-4e15-b13f-d8597545ef32
   leaseDurationSeconds: 15
   leaseTransitions: 0
-  renewTime: "2024-01-02T08:22:28.337634Z"
+  renewTime: "2024-01-02T08:22:38.404296Z"
