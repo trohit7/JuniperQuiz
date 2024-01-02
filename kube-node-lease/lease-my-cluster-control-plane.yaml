@@ -1,0 +1,15 @@
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: "2024-01-02T08:19:34Z"
+  name: my-cluster-control-plane
+  namespace: kube-node-lease
+  ownerReferences:
+  - apiVersion: v1
+    kind: Node
+    name: my-cluster-control-plane
+    uid: bc3ad3e8-065b-4530-8729-342ec2db188f
+spec:
+  holderIdentity: my-cluster-control-plane
+  leaseDurationSeconds: 40
+  renewTime: "2024-01-02T08:22:07.497170Z"

@@ -1,0 +1,13 @@
+apiVersion: coordination.k8s.io/v1
+kind: Lease
+metadata:
+  creationTimestamp: "2024-01-02T08:19:31Z"
+  labels:
+    apiserver.kubernetes.io/identity: kube-apiserver
+    kubernetes.io/hostname: my-cluster-control-plane
+  name: apiserver-d5cz45mn37ow75zqhge7unxyji
+  namespace: kube-system
+spec:
+  holderIdentity: apiserver-d5cz45mn37ow75zqhge7unxyji_93f1c531-2c13-4bdd-aca4-02d568068063
+  leaseDurationSeconds: 3600
+  renewTime: "2024-01-02T08:22:04.200845Z"
