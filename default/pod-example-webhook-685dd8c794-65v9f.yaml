@@ -84,3 +84,40 @@ spec:
               apiVersion: v1
               fieldPath: metadata.namespace
             path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-12-21T13:49:16Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-12-21T13:49:17Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-12-21T13:49:17Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-12-21T13:49:16Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://90c4b82d48aa93e540414f4113d750356d13fd1a3b72f217327e144b27a35094
+    image: trohit7/muatatewebhook:v25
+    imageID: docker-pullable://trohit7/muatatewebhook@sha256:01195e91f2840b78925ccb4bb12ba25c633de257ce2f4220ec4a23f39d352f85
+    lastState: {}
+    name: server
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2023-12-21T13:49:17Z"
+  hostIP: 192.168.49.2
+  phase: Running
+  podIP: 10.244.1.232
+  podIPs:
+  - ip: 10.244.1.232
+  qosClass: BestEffort
+  startTime: "2023-12-21T13:49:16Z"

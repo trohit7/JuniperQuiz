@@ -104,3 +104,46 @@ spec:
       path: /var/lib/minikube/etcd
       type: DirectoryOrCreate
     name: etcd-data
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-12-21T13:02:09Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-12-21T13:02:26Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-12-21T13:02:26Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-12-21T13:02:09Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://0e5ba78dd09009be67868772068f2ea684e88773cf166cbd2a7d99ee260cdaae
+    image: registry.k8s.io/etcd:3.5.7-0
+    imageID: docker-pullable://registry.k8s.io/etcd@sha256:51eae8381dcb1078289fa7b4f3df2630cdc18d09fb56f8e56b41c40e191d6c83
+    lastState:
+      terminated:
+        containerID: docker://a4722e63333971a3604c3a2ba3a0dbc01dd09237318bd78145778585f17cbe26
+        exitCode: 0
+        finishedAt: "2023-12-21T13:01:59Z"
+        reason: Completed
+        startedAt: "2023-12-21T13:01:42Z"
+    name: etcd
+    ready: true
+    restartCount: 21
+    started: true
+    state:
+      running:
+        startedAt: "2023-12-21T13:02:10Z"
+  hostIP: 192.168.49.2
+  phase: Running
+  podIP: 192.168.49.2
+  podIPs:
+  - ip: 192.168.49.2
+  qosClass: Burstable
+  startTime: "2023-12-21T13:02:09Z"

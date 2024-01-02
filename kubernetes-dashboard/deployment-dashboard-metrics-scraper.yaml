@@ -75,3 +75,22 @@ spec:
       volumes:
       - emptyDir: {}
         name: tmp-volume
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2023-11-21T12:47:31Z"
+    lastUpdateTime: "2023-11-21T12:47:33Z"
+    message: ReplicaSet "dashboard-metrics-scraper-5dd9cbfd69" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2024-01-02T04:35:26Z"
+    lastUpdateTime: "2024-01-02T04:35:26Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

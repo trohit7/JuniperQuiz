@@ -1,0 +1,24 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 228
+deprecatedFirstTimestamp: "2023-12-21T13:02:17Z"
+deprecatedLastTimestamp: "2024-01-02T06:30:29Z"
+deprecatedSource:
+  component: kubelet
+  host: minikube
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-02T06:30:29Z"
+  name: crdstesting-controller-manager-595f599f59-8xm25.17a2da65499d0d09
+  namespace: crdstesting-system
+note: Container image "trohit7/controller:latest2" already present on machine
+reason: Pulled
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{manager}
+  kind: Pod
+  name: crdstesting-controller-manager-595f599f59-8xm25
+  namespace: crdstesting-system
+  resourceVersion: "370719"
+  uid: 116ed313-6135-4d65-80db-764194f2e9ac
+type: Normal

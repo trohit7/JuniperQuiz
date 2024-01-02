@@ -117,3 +117,22 @@ spec:
             path: Corefile
           name: coredns
         name: config-volume
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2023-11-21T12:47:31Z"
+    lastUpdateTime: "2023-11-21T12:47:31Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-11-21T12:47:31Z"
+    lastUpdateTime: "2023-11-21T12:47:33Z"
+    message: ReplicaSet "coredns-5d78c9869d" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 20
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

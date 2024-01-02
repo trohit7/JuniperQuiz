@@ -36,3 +36,5 @@ spec:
     k8s-app: kube-dns
   sessionAffinity: None
   type: ClusterIP
+status:
+  loadBalancer: {}

@@ -55,3 +55,43 @@ spec:
               apiVersion: v1
               fieldPath: metadata.namespace
             path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-11-30T06:18:25Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-12-05T04:35:04Z"
+    reason: PodFailed
+    status: "False"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-12-05T04:35:04Z"
+    reason: PodFailed
+    status: "False"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-11-30T06:18:25Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://0d22b1c87b10d9c78cae7640e44529434c8101913d16739c9b6763c695de988b
+    image: nginx:latest
+    imageID: docker-pullable://nginx@sha256:10d1f5b58f74683ad34eb29287e07dab1e90f10af243f151bb50aa5dbb4d62ee
+    lastState: {}
+    name: nginx
+    ready: false
+    restartCount: 0
+    started: false
+    state:
+      terminated:
+        containerID: docker://0d22b1c87b10d9c78cae7640e44529434c8101913d16739c9b6763c695de988b
+        exitCode: 255
+        finishedAt: "2023-12-05T04:34:37Z"
+        reason: Error
+        startedAt: "2023-11-30T06:18:29Z"
+  hostIP: 192.168.49.2
+  phase: Failed
+  qosClass: BestEffort
+  startTime: "2023-11-30T06:18:25Z"

@@ -22,3 +22,5 @@ spec:
     targetPort: 8443
   sessionAffinity: None
   type: ClusterIP
+status:
+  loadBalancer: {}

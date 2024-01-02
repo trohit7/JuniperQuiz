@@ -140,3 +140,46 @@ spec:
               apiVersion: v1
               fieldPath: metadata.namespace
             path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-11-21T12:47:31Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-12-21T13:02:22Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-12-21T13:02:22Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-11-21T12:47:31Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://b1af0d7c561153c30b493ef15c9e4dd01af51713dd288bc23b14a3ed34bd3b89
+    image: registry.k8s.io/coredns/coredns:v1.10.1
+    imageID: docker-pullable://registry.k8s.io/coredns/coredns@sha256:a0ead06651cf580044aeb0a0feba63591858fb2e43ade8c9dea45a6a89ae7e5e
+    lastState:
+      terminated:
+        containerID: docker://0efb69957866a410759de848fddbb3a95e47a0d7c08976a7c4b9fb669e27ce28
+        exitCode: 0
+        finishedAt: "2023-12-21T13:02:04Z"
+        reason: Completed
+        startedAt: "2023-12-21T13:01:44Z"
+    name: coredns
+    ready: true
+    restartCount: 21
+    started: true
+    state:
+      running:
+        startedAt: "2023-12-21T13:02:19Z"
+  hostIP: 192.168.49.2
+  phase: Running
+  podIP: 10.244.1.231
+  podIPs:
+  - ip: 10.244.1.231
+  qosClass: Burstable
+  startTime: "2023-11-21T12:47:31Z"

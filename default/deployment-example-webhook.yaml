@@ -62,3 +62,22 @@ spec:
         secret:
           defaultMode: 420
           secretName: example-webhook-tls
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2023-12-11T11:45:45Z"
+    lastUpdateTime: "2023-12-21T13:49:17Z"
+    message: ReplicaSet "example-webhook-685dd8c794" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2024-01-02T04:35:26Z"
+    lastUpdateTime: "2024-01-02T04:35:26Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 2
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

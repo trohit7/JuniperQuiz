@@ -97,3 +97,46 @@ spec:
               apiVersion: v1
               fieldPath: metadata.namespace
             path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-11-21T12:47:31Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-12-21T13:02:22Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-12-21T13:02:22Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-11-21T12:47:31Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://920a565e0b497c698684764fc070048f0a9606c53468fc35346ac6732ea0316b
+    image: sha256:07655ddf2eebe5d250f7a72c25f638b27126805d61779741b4e62e69ba080558
+    imageID: docker-pullable://kubernetesui/dashboard@sha256:2e500d29e9d5f4a086b908eb8dfe7ecac57d2ab09d65b24f588b1d449841ef93
+    lastState:
+      terminated:
+        containerID: docker://f232e1d51d5d2d019772380e607a4358919090bfb558ac1f73e7295d119b3a22
+        exitCode: 2
+        finishedAt: "2023-12-21T13:01:47Z"
+        reason: Error
+        startedAt: "2023-12-21T13:01:45Z"
+    name: kubernetes-dashboard
+    ready: true
+    restartCount: 72
+    started: true
+    state:
+      running:
+        startedAt: "2023-12-21T13:02:19Z"
+  hostIP: 192.168.49.2
+  phase: Running
+  podIP: 10.244.1.227
+  podIPs:
+  - ip: 10.244.1.227
+  qosClass: BestEffort
+  startTime: "2023-11-21T12:47:31Z"

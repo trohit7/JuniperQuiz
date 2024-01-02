@@ -111,3 +111,9 @@ spec:
       serviceAccount: crdstesting-controller-manager
       serviceAccountName: crdstesting-controller-manager
       terminationGracePeriodSeconds: 10
+status:
+  availableReplicas: 1
+  fullyLabeledReplicas: 1
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1

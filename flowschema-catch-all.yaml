@@ -34,3 +34,11 @@ spec:
     - group:
         name: system:authenticated
       kind: Group
+status:
+  conditions:
+  - lastTransitionTime: "2023-11-21T12:47:15Z"
+    message: This FlowSchema references the PriorityLevelConfiguration object named
+      "catch-all" and it exists
+    reason: Found
+    status: "False"
+    type: Dangling

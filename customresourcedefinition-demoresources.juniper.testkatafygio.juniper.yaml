@@ -59,3 +59,22 @@ spec:
     storage: true
     subresources:
       status: {}
+status:
+  acceptedNames:
+    kind: DemoResource
+    listKind: DemoResourceList
+    plural: demoresources
+    singular: demoresource
+  conditions:
+  - lastTransitionTime: "2023-11-30T06:15:41Z"
+    message: no conflicts found
+    reason: NoConflicts
+    status: "True"
+    type: NamesAccepted
+  - lastTransitionTime: "2023-11-30T06:15:41Z"
+    message: the initial names have been accepted
+    reason: InitialNamesAccepted
+    status: "True"
+    type: Established
+  storedVersions:
+  - v1
