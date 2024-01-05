@@ -31,3 +31,11 @@ spec:
     - kind: User
       user:
         name: system:kube-controller-manager
+status:
+  conditions:
+  - lastTransitionTime: "2023-11-21T12:47:15Z"
+    message: This FlowSchema references the PriorityLevelConfiguration object named
+      "workload-high" and it exists
+    reason: Found
+    status: "False"
+    type: Dangling

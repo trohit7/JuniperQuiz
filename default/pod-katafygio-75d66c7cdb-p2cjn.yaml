@@ -108,3 +108,40 @@ spec:
               apiVersion: v1
               fieldPath: metadata.namespace
             path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-05T09:28:34Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-05T09:29:14Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-05T09:29:14Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-05T09:28:34Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://0a76c732083eb3e02c58d3d88b7ba82fd3a17b3d9b9941a19778d8900710cbfc
+    image: trohit7/katafygio:includekind2
+    imageID: docker-pullable://trohit7/katafygio@sha256:75651e779e9de153ac68e80ee8dace8ab45849501a0ba151ab1f40c681597c09
+    lastState: {}
+    name: katafygio
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-01-05T09:28:42Z"
+  hostIP: 192.168.49.2
+  phase: Running
+  podIP: 10.244.1.238
+  podIPs:
+  - ip: 10.244.1.238
+  qosClass: BestEffort
+  startTime: "2024-01-05T09:28:34Z"

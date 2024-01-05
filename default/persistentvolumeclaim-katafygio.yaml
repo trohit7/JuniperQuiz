@@ -27,3 +27,9 @@ spec:
   storageClassName: standard
   volumeMode: Filesystem
   volumeName: pvc-43eaa542-e0a5-4062-a3f3-e8e9b25c1b64
+status:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  phase: Bound

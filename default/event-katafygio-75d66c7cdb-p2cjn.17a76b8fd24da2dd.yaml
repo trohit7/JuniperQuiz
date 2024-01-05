@@ -1,24 +1,22 @@
-apiVersion: v1
-count: 3
+apiVersion: events.k8s.io/v1
+deprecatedCount: 3
+deprecatedFirstTimestamp: "2024-01-05T10:07:29Z"
+deprecatedLastTimestamp: "2024-01-05T10:11:10Z"
+deprecatedSource:
+  component: node-controller
 eventTime: null
-firstTimestamp: "2024-01-05T10:07:29Z"
-involvedObject:
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-05T10:07:29Z"
+  name: katafygio-75d66c7cdb-p2cjn.17a76b8fd24da2dd
+  namespace: default
+note: Node is not ready
+reason: NodeNotReady
+regarding:
   apiVersion: v1
   kind: Pod
   name: katafygio-75d66c7cdb-p2cjn
   namespace: default
   resourceVersion: "542254"
   uid: f4e45d4a-2351-4346-9a77-3efa6c6c867a
-kind: Event
-lastTimestamp: "2024-01-05T10:11:10Z"
-message: Node is not ready
-metadata:
-  creationTimestamp: "2024-01-05T10:07:29Z"
-  name: katafygio-75d66c7cdb-p2cjn.17a76b8fd24da2dd
-  namespace: default
-reason: NodeNotReady
-reportingComponent: ""
-reportingInstance: ""
-source:
-  component: node-controller
 type: Warning

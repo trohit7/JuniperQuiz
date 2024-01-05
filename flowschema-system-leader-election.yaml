@@ -34,3 +34,11 @@ spec:
       serviceAccount:
         name: '*'
         namespace: kube-system
+status:
+  conditions:
+  - lastTransitionTime: "2023-11-21T12:47:15Z"
+    message: This FlowSchema references the PriorityLevelConfiguration object named
+      "leader-election" and it exists
+    reason: Found
+    status: "False"
+    type: Dangling

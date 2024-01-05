@@ -10,3 +10,5 @@ metadata:
 spec:
   name: app
   namespace: default
+status:
+  name: app

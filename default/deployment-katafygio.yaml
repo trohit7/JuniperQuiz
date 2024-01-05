@@ -87,3 +87,22 @@ spec:
       - name: katafygio-data
         persistentVolumeClaim:
           claimName: katafygio
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2024-01-05T09:28:34Z"
+    lastUpdateTime: "2024-01-05T09:29:14Z"
+    message: ReplicaSet "katafygio-75d66c7cdb" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2024-01-05T10:11:18Z"
+    lastUpdateTime: "2024-01-05T10:11:18Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

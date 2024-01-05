@@ -9,3 +9,10 @@ spec:
   groupPriorityMinimum: 18000
   version: v1
   versionPriority: 1
+status:
+  conditions:
+  - lastTransitionTime: "2023-11-21T12:47:14Z"
+    message: Local APIServices are always available
+    reason: Local
+    status: "True"
+    type: Available

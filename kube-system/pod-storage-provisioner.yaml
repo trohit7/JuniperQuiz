@@ -70,3 +70,46 @@ spec:
               apiVersion: v1
               fieldPath: metadata.namespace
             path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-11-21T12:47:30Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-05T10:11:13Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-05T10:11:13Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-11-21T12:47:30Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://8aaa52bc9429a86ffc41e71a4e761804012d6d7a9b35a8781123a8325b0909ec
+    image: gcr.io/k8s-minikube/storage-provisioner:v5
+    imageID: docker-pullable://gcr.io/k8s-minikube/storage-provisioner@sha256:18eb69d1418e854ad5a19e399310e52808a8321e4c441c1dddad8977a0d7a944
+    lastState:
+      terminated:
+        containerID: docker://55fe5c7b8328787b5d6a8977f9816be30f7843d1fe837931132f198fa7a201c4
+        exitCode: 255
+        finishedAt: "2024-01-05T10:11:11Z"
+        reason: Error
+        startedAt: "2024-01-04T11:17:47Z"
+    name: storage-provisioner
+    ready: true
+    restartCount: 99
+    started: true
+    state:
+      running:
+        startedAt: "2024-01-05T10:11:12Z"
+  hostIP: 192.168.49.2
+  phase: Running
+  podIP: 192.168.49.2
+  podIPs:
+  - ip: 192.168.49.2
+  qosClass: BestEffort
+  startTime: "2023-11-21T12:47:30Z"

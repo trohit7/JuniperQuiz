@@ -94,3 +94,46 @@ spec:
               apiVersion: v1
               fieldPath: metadata.namespace
             path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-11-21T12:47:31Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-12-19T05:06:36Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-12-19T05:06:36Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-11-21T12:47:31Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: docker://a70437e526e5f0aef8c374321e7ab076dae4390617fca2a73d121685cfc9af8a
+    image: sha256:115053965e86b2df4d78af78d7951b8644839d20a03820c6df59a261103315f7
+    imageID: docker-pullable://kubernetesui/metrics-scraper@sha256:76049887f07a0476dc93efc2d3569b9529bf982b22d29f356092ce206e98765c
+    lastState:
+      terminated:
+        containerID: docker://38ce0956392f49e0626335131408276bbd5403096120cadfbddef8e6ba444c13
+        exitCode: 2
+        finishedAt: "2023-12-21T13:01:19Z"
+        reason: Error
+        startedAt: "2023-12-19T05:06:33Z"
+    name: dashboard-metrics-scraper
+    ready: true
+    restartCount: 20
+    started: true
+    state:
+      running:
+        startedAt: "2023-12-21T13:01:46Z"
+  hostIP: 192.168.49.2
+  phase: Running
+  podIP: 10.244.1.229
+  podIPs:
+  - ip: 10.244.1.229
+  qosClass: BestEffort
+  startTime: "2023-11-21T12:47:31Z"

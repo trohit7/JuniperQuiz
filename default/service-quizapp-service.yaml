@@ -25,3 +25,5 @@ spec:
     app: quizapp
   sessionAffinity: None
   type: NodePort
+status:
+  loadBalancer: {}
