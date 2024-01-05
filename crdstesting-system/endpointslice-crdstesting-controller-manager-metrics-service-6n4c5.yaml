@@ -16,7 +16,7 @@ endpoints:
 kind: EndpointSlice
 metadata:
   annotations:
-    endpoints.kubernetes.io/last-change-trigger-time: "2024-01-05T11:18:02Z"
+    endpoints.kubernetes.io/last-change-trigger-time: "2024-01-05T11:25:22Z"
   creationTimestamp: "2023-11-30T06:21:47Z"
   generateName: crdstesting-controller-manager-metrics-service-
   labels:

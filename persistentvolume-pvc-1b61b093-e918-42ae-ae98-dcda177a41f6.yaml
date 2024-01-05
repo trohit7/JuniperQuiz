@@ -2,12 +2,12 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   annotations:
-    hostPathProvisionerIdentity: 7c8d33b5-0c81-4725-a992-8ddbffe6bbbe
+    hostPathProvisionerIdentity: c2fb2a4f-65c5-48da-a892-59a0f1633977
     pv.kubernetes.io/provisioned-by: k8s.io/minikube-hostpath
-  creationTimestamp: "2024-01-05T09:28:34Z"
+  creationTimestamp: "2024-01-05T11:19:00Z"
   finalizers:
   - kubernetes.io/pv-protection
-  name: pvc-43eaa542-e0a5-4062-a3f3-e8e9b25c1b64
+  name: pvc-1b61b093-e918-42ae-ae98-dcda177a41f6
 spec:
   accessModes:
   - ReadWriteOnce
@@ -18,8 +18,8 @@ spec:
     kind: PersistentVolumeClaim
     name: katafygio
     namespace: default
-    resourceVersion: "542192"
-    uid: 43eaa542-e0a5-4062-a3f3-e8e9b25c1b64
+    resourceVersion: "547352"
+    uid: 1b61b093-e918-42ae-ae98-dcda177a41f6
   hostPath:
     path: /tmp/hostpath-provisioner/default/katafygio
     type: ""
@@ -27,4 +27,4 @@ spec:
   storageClassName: standard
   volumeMode: Filesystem
 status:
-  phase: Released
+  phase: Bound
