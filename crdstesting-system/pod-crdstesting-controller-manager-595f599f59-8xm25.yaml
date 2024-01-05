@@ -143,13 +143,13 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2024-01-05T11:05:12Z"
+    lastTransitionTime: "2024-01-05T11:12:36Z"
     message: 'containers with unready status: [manager]'
     reason: ContainersNotReady
     status: "False"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2024-01-05T11:05:12Z"
+    lastTransitionTime: "2024-01-05T11:12:36Z"
     message: 'containers with unready status: [manager]'
     reason: ContainersNotReady
     status: "False"
@@ -176,19 +176,19 @@ status:
     state:
       running:
         startedAt: "2023-12-21T13:01:46Z"
-  - containerID: docker://08e26f0060e41612a996e731276d36a076c2eba0ff6708ca5908c66b0abbe613
+  - containerID: docker://12a0d74beef31e4071e84c5efb5c27606bdd556c0000b5e8aae93cfdbb043739
     image: trohit7/controller:latest2
     imageID: docker-pullable://trohit7/controller@sha256:1c2931749ce9ab34e8791b80b293da03ffd5a73e24d1ba97b4e00ac95bd63141
     lastState:
       terminated:
-        containerID: docker://08e26f0060e41612a996e731276d36a076c2eba0ff6708ca5908c66b0abbe613
+        containerID: docker://12a0d74beef31e4071e84c5efb5c27606bdd556c0000b5e8aae93cfdbb043739
         exitCode: 1
-        finishedAt: "2024-01-05T11:05:11Z"
+        finishedAt: "2024-01-05T11:12:36Z"
         reason: Error
-        startedAt: "2024-01-05T11:02:53Z"
+        startedAt: "2024-01-05T11:10:20Z"
     name: manager
     ready: false
-    restartCount: 1084
+    restartCount: 1085
     started: false
     state:
       waiting:
