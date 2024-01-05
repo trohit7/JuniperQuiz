@@ -1,22 +1,24 @@
-apiVersion: events.k8s.io/v1
-deprecatedCount: 1
-deprecatedFirstTimestamp: "2024-01-05T10:11:30Z"
-deprecatedLastTimestamp: "2024-01-05T10:11:30Z"
-deprecatedSource:
-  component: k8s.io/minikube-hostpath_minikube_94ede599-e1db-4296-a319-2a3cf230f47f
+apiVersion: v1
+count: 1
 eventTime: null
-kind: Event
-metadata:
-  creationTimestamp: "2024-01-05T10:11:30Z"
-  name: k8s.io-minikube-hostpath.17a76bc7f6b811f5
-  namespace: kube-system
-note: minikube_94ede599-e1db-4296-a319-2a3cf230f47f became leader
-reason: LeaderElection
-regarding:
+firstTimestamp: "2024-01-05T10:11:30Z"
+involvedObject:
   apiVersion: v1
   kind: Endpoints
   name: k8s.io-minikube-hostpath
   namespace: kube-system
   resourceVersion: "543233"
   uid: fc1c5b13-0967-4798-a09c-13ec9dfcb257
+kind: Event
+lastTimestamp: "2024-01-05T10:11:30Z"
+message: minikube_94ede599-e1db-4296-a319-2a3cf230f47f became leader
+metadata:
+  creationTimestamp: "2024-01-05T10:11:30Z"
+  name: k8s.io-minikube-hostpath.17a76bc7f6b811f5
+  namespace: kube-system
+reason: LeaderElection
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: k8s.io/minikube-hostpath_minikube_94ede599-e1db-4296-a319-2a3cf230f47f
 type: Normal
