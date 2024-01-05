@@ -1,24 +1,22 @@
-apiVersion: v1
-count: 41
+apiVersion: events.k8s.io/v1
+deprecatedCount: 41
+deprecatedFirstTimestamp: "2023-12-25T18:53:28Z"
+deprecatedLastTimestamp: "2024-01-05T10:11:09Z"
+deprecatedSource:
+  component: node-controller
 eventTime: null
-firstTimestamp: "2023-12-25T18:53:28Z"
-involvedObject:
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-05T10:07:28Z"
+  name: kubernetes-dashboard-5c5cfc8747-dx8zf.17a427e16325ffe7
+  namespace: kubernetes-dashboard
+note: Node is not ready
+reason: NodeNotReady
+regarding:
   apiVersion: v1
   kind: Pod
   name: kubernetes-dashboard-5c5cfc8747-dx8zf
   namespace: kubernetes-dashboard
   resourceVersion: "537807"
   uid: 8b04d08d-de4e-4fa6-90b3-0eb8a3b2aaae
-kind: Event
-lastTimestamp: "2024-01-05T10:11:09Z"
-message: Node is not ready
-metadata:
-  creationTimestamp: "2024-01-05T10:07:28Z"
-  name: kubernetes-dashboard-5c5cfc8747-dx8zf.17a427e16325ffe7
-  namespace: kubernetes-dashboard
-reason: NodeNotReady
-reportingComponent: ""
-reportingInstance: ""
-source:
-  component: node-controller
 type: Warning
