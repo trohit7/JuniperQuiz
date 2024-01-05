@@ -143,16 +143,12 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2024-01-05T11:12:36Z"
-    message: 'containers with unready status: [manager]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2024-01-05T11:18:02Z"
+    status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2024-01-05T11:12:36Z"
-    message: 'containers with unready status: [manager]'
-    reason: ContainersNotReady
-    status: "False"
+    lastTransitionTime: "2024-01-05T11:18:02Z"
+    status: "True"
     type: ContainersReady
   - lastProbeTime: null
     lastTransitionTime: "2023-11-30T06:21:47Z"
@@ -176,7 +172,7 @@ status:
     state:
       running:
         startedAt: "2023-12-21T13:01:46Z"
-  - containerID: docker://12a0d74beef31e4071e84c5efb5c27606bdd556c0000b5e8aae93cfdbb043739
+  - containerID: docker://71d0caa67ddb1de1a33dabdf1eb1d33a2a6bab17c994475c31c26146dca6d96a
     image: trohit7/controller:latest2
     imageID: docker-pullable://trohit7/controller@sha256:1c2931749ce9ab34e8791b80b293da03ffd5a73e24d1ba97b4e00ac95bd63141
     lastState:
@@ -187,13 +183,12 @@ status:
         reason: Error
         startedAt: "2024-01-05T11:10:20Z"
     name: manager
-    ready: false
-    restartCount: 1085
-    started: false
+    ready: true
+    restartCount: 1086
+    started: true
     state:
-      waiting:
-        message: back-off 5m0s restarting failed container=manager pod=crdstesting-controller-manager-595f599f59-8xm25_crdstesting-system(116ed313-6135-4d65-80db-764194f2e9ac)
-        reason: CrashLoopBackOff
+      running:
+        startedAt: "2024-01-05T11:17:48Z"
   hostIP: 192.168.49.2
   phase: Running
   podIP: 10.244.1.228
