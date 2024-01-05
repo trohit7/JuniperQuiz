@@ -115,7 +115,6 @@ spec:
       serviceAccountName: crdstesting-controller-manager
       terminationGracePeriodSeconds: 10
 status:
-  availableReplicas: 1
   conditions:
   - lastTransitionTime: "2023-11-30T06:21:47Z"
     lastUpdateTime: "2023-11-30T06:22:08Z"
@@ -124,13 +123,13 @@ status:
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
-  - lastTransitionTime: "2024-01-05T11:25:22Z"
-    lastUpdateTime: "2024-01-05T11:25:22Z"
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
+  - lastTransitionTime: "2024-01-05T11:34:52Z"
+    lastUpdateTime: "2024-01-05T11:34:52Z"
+    message: Deployment does not have minimum availability.
+    reason: MinimumReplicasUnavailable
+    status: "False"
     type: Available
   observedGeneration: 1
-  readyReplicas: 1
   replicas: 1
+  unavailableReplicas: 1
   updatedReplicas: 1
