@@ -124,8 +124,8 @@ status:
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
-  - lastTransitionTime: "2024-01-05T11:18:02Z"
-    lastUpdateTime: "2024-01-05T11:18:02Z"
+  - lastTransitionTime: "2024-01-05T11:25:22Z"
+    lastUpdateTime: "2024-01-05T11:25:22Z"
     message: Deployment has minimum availability.
     reason: MinimumReplicasAvailable
     status: "True"
