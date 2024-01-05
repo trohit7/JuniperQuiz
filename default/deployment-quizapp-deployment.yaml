@@ -44,22 +44,3 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
-status:
-  availableReplicas: 1
-  conditions:
-  - lastTransitionTime: "2023-11-29T17:25:07Z"
-    lastUpdateTime: "2023-11-29T17:25:08Z"
-    message: ReplicaSet "quizapp-deployment-567b8b576d" has successfully progressed.
-    reason: NewReplicaSetAvailable
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2024-01-02T04:35:27Z"
-    lastUpdateTime: "2024-01-02T04:35:27Z"
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
-    type: Available
-  observedGeneration: 1
-  readyReplicas: 1
-  replicas: 1
-  updatedReplicas: 1

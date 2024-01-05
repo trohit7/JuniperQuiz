@@ -1,0 +1,24 @@
+apiVersion: v1
+count: 41
+eventTime: null
+firstTimestamp: "2023-12-25T18:53:27Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: kube-scheduler-minikube
+  namespace: kube-system
+  resourceVersion: "537797"
+  uid: 6dc00d56-c40b-4768-867c-e62848e09223
+kind: Event
+lastTimestamp: "2024-01-05T10:11:11Z"
+message: Node is not ready
+metadata:
+  creationTimestamp: "2024-01-05T10:07:30Z"
+  name: kube-scheduler-minikube.17a427e15d81aca4
+  namespace: kube-system
+reason: NodeNotReady
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: node-controller
+type: Warning

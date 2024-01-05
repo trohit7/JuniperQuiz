@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: "2024-01-02T08:19:32Z"
+  creationTimestamp: "2023-11-21T12:47:16Z"
   labels:
     component: apiserver
     provider: kubernetes
@@ -19,8 +19,6 @@ spec:
   - name: https
     port: 443
     protocol: TCP
-    targetPort: 6443
+    targetPort: 8443
   sessionAffinity: None
   type: ClusterIP
-status:
-  loadBalancer: {}

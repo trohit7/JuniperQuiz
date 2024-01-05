@@ -1,0 +1,24 @@
+apiVersion: v1
+count: 41
+eventTime: null
+firstTimestamp: "2023-12-25T18:53:27Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: coredns-5d78c9869d-thgpb
+  namespace: kube-system
+  resourceVersion: "537817"
+  uid: 640b8735-be3e-433f-91ca-8c2f81d4bcdd
+kind: Event
+lastTimestamp: "2024-01-05T10:11:10Z"
+message: Node is not ready
+metadata:
+  creationTimestamp: "2024-01-05T10:07:29Z"
+  name: coredns-5d78c9869d-thgpb.17a427e1449409de
+  namespace: kube-system
+reason: NodeNotReady
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: node-controller
+type: Warning

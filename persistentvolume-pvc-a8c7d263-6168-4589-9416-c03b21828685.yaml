@@ -26,5 +26,3 @@ spec:
   persistentVolumeReclaimPolicy: Delete
   storageClassName: standard
   volumeMode: Filesystem
-status:
-  phase: Bound

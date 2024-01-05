@@ -1,0 +1,24 @@
+apiVersion: v1
+count: 41
+eventTime: null
+firstTimestamp: "2023-12-25T18:53:27Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: kube-apiserver-minikube
+  namespace: kube-system
+  resourceVersion: "537811"
+  uid: 5ebaffbc-2ef5-4055-b80b-b41fb9c34eab
+kind: Event
+lastTimestamp: "2024-01-05T10:11:10Z"
+message: Node is not ready
+metadata:
+  creationTimestamp: "2024-01-05T10:07:29Z"
+  name: kube-apiserver-minikube.17a427e156966a46
+  namespace: kube-system
+reason: NodeNotReady
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: node-controller
+type: Warning

@@ -4,7 +4,7 @@ metadata:
   annotations:
     prometheus.io/port: "9153"
     prometheus.io/scrape: "true"
-  creationTimestamp: "2024-01-02T08:19:34Z"
+  creationTimestamp: "2023-11-21T12:47:18Z"
   labels:
     k8s-app: kube-dns
     kubernetes.io/cluster-service: "true"
@@ -36,5 +36,3 @@ spec:
     k8s-app: kube-dns
   sessionAffinity: None
   type: ClusterIP
-status:
-  loadBalancer: {}

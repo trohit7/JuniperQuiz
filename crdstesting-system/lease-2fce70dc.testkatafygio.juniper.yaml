@@ -5,8 +5,8 @@ metadata:
   name: 2fce70dc.testkatafygio.juniper
   namespace: crdstesting-system
 spec:
-  acquireTime: "2024-01-02T06:38:14.878909Z"
-  holderIdentity: crdstesting-controller-manager-595f599f59-8xm25_e78de714-513e-45d4-a50d-342e0064d010
+  acquireTime: "2024-01-05T10:40:58.893037Z"
+  holderIdentity: crdstesting-controller-manager-595f599f59-8xm25_f415f28e-ad7d-4145-a9d5-751ebf57b0ee
   leaseDurationSeconds: 15
-  leaseTransitions: 846
-  renewTime: "2024-01-02T06:39:45.618813Z"
+  leaseTransitions: 1081
+  renewTime: "2024-01-05T10:42:57.605049Z"

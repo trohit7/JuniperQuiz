@@ -3,33 +3,39 @@ data:
   ClusterConfiguration: |
     apiServer:
       certSANs:
-      - localhost
       - 127.0.0.1
+      - localhost
+      - 192.168.49.2
       extraArgs:
         authorization-mode: Node,RBAC
-        runtime-config: ""
+        enable-admission-plugins: NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota
       timeoutForControlPlane: 4m0s
     apiVersion: kubeadm.k8s.io/v1beta3
-    certificatesDir: /etc/kubernetes/pki
-    clusterName: my-cluster
-    controlPlaneEndpoint: my-cluster-control-plane:6443
+    certificatesDir: /var/lib/minikube/certs
+    clusterName: mk
+    controlPlaneEndpoint: control-plane.minikube.internal:8443
     controllerManager:
       extraArgs:
-        enable-hostpath-provisioner: "true"
+        allocate-node-cidrs: "true"
+        leader-elect: "false"
     dns: {}
     etcd:
       local:
-        dataDir: /var/lib/etcd
+        dataDir: /var/lib/minikube/etcd
+        extraArgs:
+          proxy-refresh-interval: "70000"
     imageRepository: registry.k8s.io
     kind: ClusterConfiguration
-    kubernetesVersion: v1.27.3
+    kubernetesVersion: v1.27.4
     networking:
       dnsDomain: cluster.local
       podSubnet: 10.244.0.0/16
-      serviceSubnet: 10.96.0.0/16
-    scheduler: {}
+      serviceSubnet: 10.96.0.0/12
+    scheduler:
+      extraArgs:
+        leader-elect: "false"
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2024-01-02T08:19:32Z"
+  creationTimestamp: "2023-11-21T12:47:17Z"
   name: kubeadm-config
   namespace: kube-system

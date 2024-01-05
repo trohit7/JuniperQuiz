@@ -1,0 +1,24 @@
+apiVersion: v1
+count: 41
+eventTime: null
+firstTimestamp: "2023-12-25T18:53:28Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: storage-provisioner
+  namespace: kube-system
+  resourceVersion: "537804"
+  uid: 3fc6048a-9d59-4f16-b885-e41f8c541ca6
+kind: Event
+lastTimestamp: "2024-01-05T10:11:09Z"
+message: Node is not ready
+metadata:
+  creationTimestamp: "2024-01-05T10:07:28Z"
+  name: storage-provisioner.17a427e1629a0a01
+  namespace: kube-system
+reason: NodeNotReady
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: node-controller
+type: Warning

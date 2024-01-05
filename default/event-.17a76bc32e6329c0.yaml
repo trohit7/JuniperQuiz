@@ -1,0 +1,20 @@
+apiVersion: v1
+count: 1
+eventTime: null
+firstTimestamp: "2024-01-05T10:11:10Z"
+involvedObject:
+  apiVersion: v1
+  kind: Endpoints
+kind: Event
+lastTimestamp: "2024-01-05T10:11:10Z"
+message: minikube_f6dd8447-ad84-476f-86c5-44e0e84a52d6 stopped leading
+metadata:
+  creationTimestamp: "2024-01-05T10:11:10Z"
+  name: .17a76bc32e6329c0
+  namespace: default
+reason: LeaderElection
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: k8s.io/minikube-hostpath_minikube_f6dd8447-ad84-476f-86c5-44e0e84a52d6
+type: Normal

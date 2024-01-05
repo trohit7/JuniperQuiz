@@ -3,7 +3,7 @@ kind: PriorityLevelConfiguration
 metadata:
   annotations:
     apf.kubernetes.io/autoupdate-spec: "true"
-  creationTimestamp: "2024-01-02T08:19:31Z"
+  creationTimestamp: "2023-11-21T12:47:15Z"
   name: catch-all
 spec:
   limited:
@@ -12,4 +12,3 @@ spec:
     limitResponse:
       type: Reject
   type: Limited
-status: {}

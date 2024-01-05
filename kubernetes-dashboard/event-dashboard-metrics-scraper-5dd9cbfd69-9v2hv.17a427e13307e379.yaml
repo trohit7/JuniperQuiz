@@ -1,0 +1,24 @@
+apiVersion: v1
+count: 41
+eventTime: null
+firstTimestamp: "2023-12-25T18:53:27Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: dashboard-metrics-scraper-5dd9cbfd69-9v2hv
+  namespace: kubernetes-dashboard
+  resourceVersion: "537813"
+  uid: 1a304139-09cf-4672-bf6e-19b52a17dbe9
+kind: Event
+lastTimestamp: "2024-01-05T10:11:10Z"
+message: Node is not ready
+metadata:
+  creationTimestamp: "2024-01-05T10:07:28Z"
+  name: dashboard-metrics-scraper-5dd9cbfd69-9v2hv.17a427e13307e379
+  namespace: kubernetes-dashboard
+reason: NodeNotReady
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: node-controller
+type: Warning

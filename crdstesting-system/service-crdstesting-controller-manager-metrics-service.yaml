@@ -32,5 +32,3 @@ spec:
     control-plane: controller-manager
   sessionAffinity: None
   type: ClusterIP
-status:
-  loadBalancer: {}

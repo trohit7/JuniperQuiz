@@ -27,5 +27,3 @@ spec:
     k8s-app: dashboard-metrics-scraper
   sessionAffinity: None
   type: ClusterIP
-status:
-  loadBalancer: {}

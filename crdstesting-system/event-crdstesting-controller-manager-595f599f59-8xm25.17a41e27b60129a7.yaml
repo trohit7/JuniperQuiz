@@ -1,0 +1,27 @@
+apiVersion: v1
+count: 43
+eventTime: null
+firstTimestamp: "2023-12-25T15:55:14Z"
+involvedObject:
+  apiVersion: v1
+  fieldPath: spec.containers{manager}
+  kind: Pod
+  name: crdstesting-controller-manager-595f599f59-8xm25
+  namespace: crdstesting-system
+  resourceVersion: "370719"
+  uid: 116ed313-6135-4d65-80db-764194f2e9ac
+kind: Event
+lastTimestamp: "2024-01-05T10:07:28Z"
+message: 'Liveness probe failed: Get "http://10.244.1.228:8081/healthz": dial tcp
+  10.244.1.228:8081: connect: connection refused'
+metadata:
+  creationTimestamp: "2024-01-05T10:07:28Z"
+  name: crdstesting-controller-manager-595f599f59-8xm25.17a41e27b60129a7
+  namespace: crdstesting-system
+reason: Unhealthy
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: minikube
+type: Warning

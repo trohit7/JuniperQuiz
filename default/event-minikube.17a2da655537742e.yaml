@@ -1,0 +1,22 @@
+apiVersion: v1
+count: 55
+eventTime: null
+firstTimestamp: "2023-12-21T13:02:17Z"
+involvedObject:
+  kind: Node
+  name: minikube
+  uid: minikube
+kind: Event
+lastTimestamp: "2024-01-05T10:11:20Z"
+message: 'Node minikube status is now: NodeReady'
+metadata:
+  creationTimestamp: "2024-01-05T09:40:58Z"
+  name: minikube.17a2da655537742e
+  namespace: default
+reason: NodeReady
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: kubelet
+  host: minikube
+type: Normal

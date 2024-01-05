@@ -3,7 +3,7 @@ kind: FlowSchema
 metadata:
   annotations:
     apf.kubernetes.io/autoupdate-spec: "true"
-  creationTimestamp: "2024-01-02T08:19:31Z"
+  creationTimestamp: "2023-11-21T12:47:15Z"
   name: system-nodes
 spec:
   distinguisherMethod:
@@ -31,11 +31,3 @@ spec:
     - group:
         name: system:nodes
       kind: Group
-status:
-  conditions:
-  - lastTransitionTime: "2024-01-02T08:19:31Z"
-    message: This FlowSchema references the PriorityLevelConfiguration object named
-      "system" and it exists
-    reason: Found
-    status: "False"
-    type: Dangling

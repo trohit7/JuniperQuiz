@@ -1,0 +1,24 @@
+apiVersion: v1
+count: 41
+eventTime: null
+firstTimestamp: "2023-12-25T18:53:28Z"
+involvedObject:
+  apiVersion: v1
+  kind: Pod
+  name: demo-pod
+  namespace: default
+  resourceVersion: "537788"
+  uid: 430eff63-b703-45d7-8a15-8de9bb13e5da
+kind: Event
+lastTimestamp: "2024-01-05T10:11:09Z"
+message: Node is not ready
+metadata:
+  creationTimestamp: "2024-01-05T10:07:28Z"
+  name: demo-pod.17a427e1678c31ac
+  namespace: default
+reason: NodeNotReady
+reportingComponent: ""
+reportingInstance: ""
+source:
+  component: node-controller
+type: Warning

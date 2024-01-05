@@ -28,5 +28,3 @@ spec:
     app: example-webhook
   sessionAffinity: None
   type: ClusterIP
-status:
-  loadBalancer: {}

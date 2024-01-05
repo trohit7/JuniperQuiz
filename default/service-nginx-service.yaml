@@ -29,5 +29,3 @@ spec:
     app: nginx
   sessionAffinity: None
   type: ClusterIP
-status:
-  loadBalancer: {}
