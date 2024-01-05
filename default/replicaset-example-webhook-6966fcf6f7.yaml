@@ -65,6 +65,3 @@ spec:
         secret:
           defaultMode: 420
           secretName: example-webhook-tls
-status:
-  observedGeneration: 2
-  replicas: 0

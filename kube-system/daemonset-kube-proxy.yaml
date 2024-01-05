@@ -3,7 +3,7 @@ kind: DaemonSet
 metadata:
   annotations:
     deprecated.daemonset.template.generation: "1"
-  creationTimestamp: "2024-01-02T08:19:34Z"
+  creationTimestamp: "2023-11-21T12:47:18Z"
   labels:
     k8s-app: kube-proxy
   name: kube-proxy
@@ -30,7 +30,7 @@ spec:
             fieldRef:
               apiVersion: v1
               fieldPath: spec.nodeName
-        image: registry.k8s.io/kube-proxy:v1.27.3
+        image: registry.k8s.io/kube-proxy:v1.27.4
         imagePullPolicy: IfNotPresent
         name: kube-proxy
         resources: {}
@@ -77,11 +77,3 @@ spec:
       maxSurge: 0
       maxUnavailable: 1
     type: RollingUpdate
-status:
-  currentNumberScheduled: 1
-  desiredNumberScheduled: 1
-  numberAvailable: 1
-  numberMisscheduled: 0
-  numberReady: 1
-  observedGeneration: 1
-  updatedNumberScheduled: 1
