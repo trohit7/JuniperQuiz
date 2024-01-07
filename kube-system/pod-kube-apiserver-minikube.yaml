@@ -146,43 +146,43 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-12-21T13:02:09Z"
+    lastTransitionTime: "2024-01-07T07:24:58Z"
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-12-21T13:02:27Z"
+    lastTransitionTime: "2024-01-07T07:25:40Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-12-21T13:02:27Z"
+    lastTransitionTime: "2024-01-07T07:25:40Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
-    lastTransitionTime: "2023-12-21T13:02:09Z"
+    lastTransitionTime: "2024-01-07T07:24:58Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: docker://ca466052503bb9a319ea8b5e992a92f8215bd7e2ba097514f4c25c21b863081d
+  - containerID: docker://d4261909d2a0118c9b80c4d43fd619248676d1ce677950d5cbc8af7e66f799bd
     image: registry.k8s.io/kube-apiserver:v1.27.4
     imageID: docker-pullable://registry.k8s.io/kube-apiserver@sha256:697cd88d94f7f2ef42144cb3072b016dcb2e9251f0e7d41a7fede557e555452d
     lastState:
       terminated:
-        containerID: docker://ef2c8b614831b52d5b051cfe637ee65cad9d066ba17d6182b2a9ade088db48a6
+        containerID: docker://176be00c16c3ef9f40a8d20f2d3b124016d13ccd1f924b198d3a376fcf5d7d74
         exitCode: 1
-        finishedAt: "2023-12-21T13:02:01Z"
+        finishedAt: "2024-01-07T07:24:42Z"
         reason: Error
-        startedAt: "2023-12-21T13:01:41Z"
+        startedAt: "2024-01-07T07:23:51Z"
     name: kube-apiserver
     ready: true
-    restartCount: 21
+    restartCount: 23
     started: true
     state:
       running:
-        startedAt: "2023-12-21T13:02:03Z"
+        startedAt: "2024-01-07T07:24:59Z"
   hostIP: 192.168.49.2
   phase: Running
   podIP: 192.168.49.2
   podIPs:
   - ip: 192.168.49.2
   qosClass: Burstable
-  startTime: "2023-12-21T13:02:09Z"
+  startTime: "2024-01-07T07:24:58Z"

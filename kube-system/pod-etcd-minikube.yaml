@@ -107,43 +107,43 @@ spec:
 status:
   conditions:
   - lastProbeTime: null
-    lastTransitionTime: "2023-12-21T13:02:09Z"
+    lastTransitionTime: "2024-01-07T07:24:58Z"
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-12-21T13:02:26Z"
+    lastTransitionTime: "2024-01-07T07:25:29Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-12-21T13:02:26Z"
+    lastTransitionTime: "2024-01-07T07:25:29Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
-    lastTransitionTime: "2023-12-21T13:02:09Z"
+    lastTransitionTime: "2024-01-07T07:24:58Z"
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: docker://0e5ba78dd09009be67868772068f2ea684e88773cf166cbd2a7d99ee260cdaae
+  - containerID: docker://72b9545fc7b299b32196bd10b2cfe1d088062d19d8b161d62a92b8227484381b
     image: registry.k8s.io/etcd:3.5.7-0
     imageID: docker-pullable://registry.k8s.io/etcd@sha256:51eae8381dcb1078289fa7b4f3df2630cdc18d09fb56f8e56b41c40e191d6c83
     lastState:
       terminated:
-        containerID: docker://a4722e63333971a3604c3a2ba3a0dbc01dd09237318bd78145778585f17cbe26
-        exitCode: 0
-        finishedAt: "2023-12-21T13:01:59Z"
-        reason: Completed
-        startedAt: "2023-12-21T13:01:42Z"
+        containerID: docker://aeff1fd722bc5c530cfbac4bf24c876e1e9d7f52c58575bb8b3ecbb2414880dc
+        exitCode: 2
+        finishedAt: "2024-01-07T07:24:41Z"
+        reason: Error
+        startedAt: "2024-01-07T07:23:50Z"
     name: etcd
     ready: true
-    restartCount: 21
+    restartCount: 23
     started: true
     state:
       running:
-        startedAt: "2023-12-21T13:02:10Z"
+        startedAt: "2024-01-07T07:24:59Z"
   hostIP: 192.168.49.2
   phase: Running
   podIP: 192.168.49.2
   podIPs:
   - ip: 192.168.49.2
   qosClass: Burstable
-  startTime: "2023-12-21T13:02:09Z"
+  startTime: "2024-01-07T07:24:58Z"

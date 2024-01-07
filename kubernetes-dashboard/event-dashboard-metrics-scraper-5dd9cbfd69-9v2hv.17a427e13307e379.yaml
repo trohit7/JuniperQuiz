@@ -1,13 +1,13 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 41
+deprecatedCount: 43
 deprecatedFirstTimestamp: "2023-12-25T18:53:27Z"
-deprecatedLastTimestamp: "2024-01-05T10:11:10Z"
+deprecatedLastTimestamp: "2024-01-07T07:23:08Z"
 deprecatedSource:
   component: node-controller
 eventTime: null
 kind: Event
 metadata:
-  creationTimestamp: "2024-01-05T10:07:28Z"
+  creationTimestamp: "2024-01-07T07:23:10Z"
   name: dashboard-metrics-scraper-5dd9cbfd69-9v2hv.17a427e13307e379
   namespace: kubernetes-dashboard
 note: Node is not ready
@@ -17,6 +17,6 @@ regarding:
   kind: Pod
   name: dashboard-metrics-scraper-5dd9cbfd69-9v2hv
   namespace: kubernetes-dashboard
-  resourceVersion: "537813"
+  resourceVersion: "550928"
   uid: 1a304139-09cf-4672-bf6e-19b52a17dbe9
 type: Warning

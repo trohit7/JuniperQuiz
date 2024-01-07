@@ -1,13 +1,13 @@
 apiVersion: events.k8s.io/v1
-deprecatedCount: 41
+deprecatedCount: 43
 deprecatedFirstTimestamp: "2023-12-25T18:53:27Z"
-deprecatedLastTimestamp: "2024-01-05T10:11:10Z"
+deprecatedLastTimestamp: "2024-01-07T07:23:11Z"
 deprecatedSource:
   component: node-controller
 eventTime: null
 kind: Event
 metadata:
-  creationTimestamp: "2024-01-05T10:07:29Z"
+  creationTimestamp: "2024-01-07T07:23:11Z"
   name: kube-controller-manager-minikube.17a427e15bdc943f
   namespace: kube-system
 note: Node is not ready
@@ -17,6 +17,6 @@ regarding:
   kind: Pod
   name: kube-controller-manager-minikube
   namespace: kube-system
-  resourceVersion: "537827"
+  resourceVersion: "550927"
   uid: 6f60b594-b605-4fee-b22c-39d1752b00bb
 type: Warning

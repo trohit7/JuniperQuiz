@@ -65,7 +65,7 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-12-21T14:14:35Z"
+    lastTransitionTime: "2024-01-07T07:25:31Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
@@ -77,21 +77,21 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: docker://03880bdcb7c6c3b7f45bf71bdc6252c6d48cfb68f5b3bdc32d0230cfd38297da
+  - containerID: docker://ff0baa0a53e3cc502812a7fa566f2a78e47ff06b764d54e7755069220ee06085
     image: nginx:latest
-    imageID: docker-pullable://nginx@sha256:bd30b8d47b230de52431cc71c5cce149b8d5d4c87c204902acf2504435d4b4c9
+    imageID: docker-pullable://nginx@sha256:2bdc49f2f8ae8d8dc50ed00f2ee56d00385c6f8bc8a8b320d0a294d9e3b49026
     lastState: {}
     name: nginx
     ready: true
-    restartCount: 0
+    restartCount: 1
     started: true
     state:
       running:
-        startedAt: "2023-12-21T14:14:34Z"
+        startedAt: "2024-01-07T07:24:13Z"
   hostIP: 192.168.49.2
   phase: Running
-  podIP: 10.244.1.233
+  podIP: 10.244.1.243
   podIPs:
-  - ip: 10.244.1.233
+  - ip: 10.244.1.243
   qosClass: BestEffort
   startTime: "2023-12-21T14:14:15Z"

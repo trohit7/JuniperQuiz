@@ -132,11 +132,11 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-12-21T13:02:22Z"
+    lastTransitionTime: "2024-01-07T07:25:36Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-12-21T13:02:22Z"
+    lastTransitionTime: "2024-01-07T07:25:36Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
@@ -144,23 +144,23 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: docker://bcb199c4bce26a55400d1b89b5d67be91a1f48efa9bbda7d611d27ea6ed5b4d7
+  - containerID: docker://8b84de5261df6674a0c3de941e504c7a99b46f5e38fade4eca0ff51c821cec8c
     image: registry.k8s.io/kube-proxy:v1.27.4
     imageID: docker-pullable://registry.k8s.io/kube-proxy@sha256:4bcb707da9898d2625f5d4edc6d0c96519a24f16db914fc673aa8f97e41dbabf
     lastState:
       terminated:
-        containerID: docker://09029dd744f164e605807d502a4c47877c12168553c010f17ac5784d476849cf
+        containerID: docker://f14c2a242d0287a930b5ed88e6de0374b0b450928eaed0f726bb6598fcce8313
         exitCode: 2
-        finishedAt: "2023-12-21T13:01:59Z"
+        finishedAt: "2024-01-07T07:24:42Z"
         reason: Error
-        startedAt: "2023-12-21T13:01:42Z"
+        startedAt: "2024-01-07T07:23:51Z"
     name: kube-proxy
     ready: true
-    restartCount: 21
+    restartCount: 23
     started: true
     state:
       running:
-        startedAt: "2023-12-21T13:02:21Z"
+        startedAt: "2024-01-07T07:25:34Z"
   hostIP: 192.168.49.2
   phase: Running
   podIP: 192.168.49.2

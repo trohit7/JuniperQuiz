@@ -1,0 +1,23 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 2
+deprecatedFirstTimestamp: "2024-01-07T07:25:30Z"
+deprecatedLastTimestamp: "2024-01-07T07:25:30Z"
+deprecatedSource:
+  component: kubelet
+  host: minikube
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-07T07:25:34Z"
+  name: kube-apiserver-minikube.17a7ffe1fec95e61
+  namespace: kube-system
+note: 'Startup probe failed: HTTP probe failed with statuscode: 403'
+reason: Unhealthy
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kube-apiserver}
+  kind: Pod
+  name: kube-apiserver-minikube
+  namespace: kube-system
+  uid: f241819aff4d77a34fc71bea1fac9af8
+type: Warning

@@ -1,0 +1,25 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2024-01-07T07:23:06Z"
+deprecatedLastTimestamp: "2024-01-07T07:23:06Z"
+deprecatedSource:
+  component: kubelet
+  host: minikube
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-07T07:23:07Z"
+  name: katafygio-75d66c7cdb-d8xhg.17a7ffc077af8b22
+  namespace: default
+note: 'Readiness probe failed: Get "http://10.244.1.240:8080/health": context deadline
+  exceeded (Client.Timeout exceeded while awaiting headers)'
+reason: Unhealthy
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{katafygio}
+  kind: Pod
+  name: katafygio-75d66c7cdb-d8xhg
+  namespace: default
+  resourceVersion: "548058"
+  uid: 432d694a-fded-44a1-bc58-8c237175e97e
+type: Warning

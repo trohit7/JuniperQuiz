@@ -104,11 +104,11 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2024-01-04T04:34:59Z"
+    lastTransitionTime: "2024-01-07T07:25:36Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2024-01-04T04:34:59Z"
+    lastTransitionTime: "2024-01-07T07:25:36Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
@@ -116,27 +116,27 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: docker://d16667cbb1dad28be10973f3d770561b5bb418fc8265fb27cc83883722d92c6d
+  - containerID: docker://95dc82862174f0faf01674444f03319bf831de504be229d3d6a82fd5d9cc8b64
     image: sha256:07655ddf2eebe5d250f7a72c25f638b27126805d61779741b4e62e69ba080558
     imageID: docker-pullable://kubernetesui/dashboard@sha256:2e500d29e9d5f4a086b908eb8dfe7ecac57d2ab09d65b24f588b1d449841ef93
     lastState:
       terminated:
-        containerID: docker://920a565e0b497c698684764fc070048f0a9606c53468fc35346ac6732ea0316b
+        containerID: docker://bd08182ee9a4dcd93ba91201741c8ea59e17bb3d22bee6433cbf947895fb4fd3
         exitCode: 2
-        finishedAt: "2024-01-04T04:34:58Z"
+        finishedAt: "2024-01-07T07:24:27Z"
         reason: Error
-        startedAt: "2023-12-21T13:02:19Z"
+        startedAt: "2024-01-07T07:24:15Z"
     name: kubernetes-dashboard
     ready: true
-    restartCount: 73
+    restartCount: 76
     started: true
     state:
       running:
-        startedAt: "2024-01-04T04:34:59Z"
+        startedAt: "2024-01-07T07:25:34Z"
   hostIP: 192.168.49.2
   phase: Running
-  podIP: 10.244.1.227
+  podIP: 10.244.1.241
   podIPs:
-  - ip: 10.244.1.227
+  - ip: 10.244.1.241
   qosClass: BestEffort
   startTime: "2023-11-21T12:47:31Z"

@@ -1,0 +1,24 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2024-01-07T07:25:34Z"
+deprecatedLastTimestamp: "2024-01-07T07:25:34Z"
+deprecatedSource:
+  component: kubelet
+  host: minikube
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-07T07:25:35Z"
+  name: kubernetes-dashboard-5c5cfc8747-dx8zf.17a7ffe2fed0bc85
+  namespace: kubernetes-dashboard
+note: Started container kubernetes-dashboard
+reason: Started
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{kubernetes-dashboard}
+  kind: Pod
+  name: kubernetes-dashboard-5c5cfc8747-dx8zf
+  namespace: kubernetes-dashboard
+  resourceVersion: "551000"
+  uid: 8b04d08d-de4e-4fa6-90b3-0eb8a3b2aaae
+type: Normal

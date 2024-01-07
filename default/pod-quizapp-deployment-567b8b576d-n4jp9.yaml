@@ -79,7 +79,7 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-12-19T05:06:34Z"
+    lastTransitionTime: "2024-01-07T07:25:31Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
@@ -91,27 +91,27 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: docker://26007637b18e1d927c750c6e720f1e602dc1c51decafeca6bd7a9edafb831776
+  - containerID: docker://5e9cebe86c0e71494c10629e22ffcba9456baf6c74d2f49dfe36d55afcef3b69
     image: trohit7/quizapp:mytagcl
     imageID: docker-pullable://trohit7/quizapp@sha256:f784cafe4d9bc4193e2a890718fbdc0f23ec23d5360a8c28cac2069cb3e288ee
     lastState:
       terminated:
-        containerID: docker://d5ed7a8d8a4652f8b85fc0d403d38660077d81378ebe12b1aa1c297f976e8549
+        containerID: docker://26007637b18e1d927c750c6e720f1e602dc1c51decafeca6bd7a9edafb831776
         exitCode: 137
-        finishedAt: "2023-12-21T13:01:27Z"
+        finishedAt: "2024-01-07T07:23:31Z"
         reason: Error
-        startedAt: "2023-12-19T05:06:33Z"
+        startedAt: "2023-12-21T13:01:46Z"
     name: quizapp
     ready: true
-    restartCount: 5
+    restartCount: 6
     started: true
     state:
       running:
-        startedAt: "2023-12-21T13:01:46Z"
+        startedAt: "2024-01-07T07:23:54Z"
   hostIP: 192.168.49.2
   phase: Running
-  podIP: 10.244.1.230
+  podIP: 10.244.1.245
   podIPs:
-  - ip: 10.244.1.230
+  - ip: 10.244.1.245
   qosClass: BestEffort
   startTime: "2023-11-29T17:25:07Z"

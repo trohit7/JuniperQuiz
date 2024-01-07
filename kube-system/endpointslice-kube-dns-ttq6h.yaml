@@ -2,7 +2,7 @@ addressType: IPv4
 apiVersion: discovery.k8s.io/v1
 endpoints:
 - addresses:
-  - 10.244.1.231
+  - 10.244.1.249
   conditions:
     ready: true
     serving: true
@@ -15,6 +15,8 @@ endpoints:
     uid: 640b8735-be3e-433f-91ca-8c2f81d4bcdd
 kind: EndpointSlice
 metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-11-21T12:47:18Z"
   creationTimestamp: "2023-11-21T12:47:31Z"
   generateName: kube-dns-
   labels:

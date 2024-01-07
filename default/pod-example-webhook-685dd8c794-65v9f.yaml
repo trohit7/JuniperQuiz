@@ -91,11 +91,11 @@ status:
     status: "True"
     type: Initialized
   - lastProbeTime: null
-    lastTransitionTime: "2023-12-21T13:49:17Z"
+    lastTransitionTime: "2024-01-07T07:25:36Z"
     status: "True"
     type: Ready
   - lastProbeTime: null
-    lastTransitionTime: "2023-12-21T13:49:17Z"
+    lastTransitionTime: "2024-01-07T07:25:36Z"
     status: "True"
     type: ContainersReady
   - lastProbeTime: null
@@ -103,21 +103,27 @@ status:
     status: "True"
     type: PodScheduled
   containerStatuses:
-  - containerID: docker://90c4b82d48aa93e540414f4113d750356d13fd1a3b72f217327e144b27a35094
+  - containerID: docker://f30245b7c2a4d055f85db6775ba232d3c52764b1213e21c128fe50c2b67e7c4f
     image: trohit7/muatatewebhook:v25
     imageID: docker-pullable://trohit7/muatatewebhook@sha256:01195e91f2840b78925ccb4bb12ba25c633de257ce2f4220ec4a23f39d352f85
-    lastState: {}
+    lastState:
+      terminated:
+        containerID: docker://d9183394769efdf4dd74aa3c0d952a86c35fb3bcd20d60af6c6d62a810a1c6e6
+        exitCode: 2
+        finishedAt: "2024-01-07T07:24:33Z"
+        reason: Error
+        startedAt: "2024-01-07T07:24:23Z"
     name: server
     ready: true
-    restartCount: 0
+    restartCount: 3
     started: true
     state:
       running:
-        startedAt: "2023-12-21T13:49:17Z"
+        startedAt: "2024-01-07T07:25:33Z"
   hostIP: 192.168.49.2
   phase: Running
-  podIP: 10.244.1.232
+  podIP: 10.244.1.242
   podIPs:
-  - ip: 10.244.1.232
+  - ip: 10.244.1.242
   qosClass: BestEffort
   startTime: "2023-12-21T13:49:16Z"

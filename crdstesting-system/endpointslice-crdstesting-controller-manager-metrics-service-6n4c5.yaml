@@ -2,10 +2,10 @@ addressType: IPv4
 apiVersion: discovery.k8s.io/v1
 endpoints:
 - addresses:
-  - 10.244.1.228
+  - 10.244.1.244
   conditions:
-    ready: false
-    serving: false
+    ready: true
+    serving: true
     terminating: false
   nodeName: minikube
   targetRef:
@@ -16,7 +16,7 @@ endpoints:
 kind: EndpointSlice
 metadata:
   annotations:
-    endpoints.kubernetes.io/last-change-trigger-time: "2024-01-05T11:34:52Z"
+    endpoints.kubernetes.io/last-change-trigger-time: "2024-01-07T07:31:11Z"
   creationTimestamp: "2023-11-30T06:21:47Z"
   generateName: crdstesting-controller-manager-metrics-service-
   labels:

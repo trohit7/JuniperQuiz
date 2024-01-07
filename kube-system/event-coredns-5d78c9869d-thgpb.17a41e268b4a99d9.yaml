@@ -1,0 +1,25 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 23
+deprecatedFirstTimestamp: "2023-12-25T15:55:09Z"
+deprecatedLastTimestamp: "2024-01-07T07:23:02Z"
+deprecatedSource:
+  component: kubelet
+  host: minikube
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-07T07:23:07Z"
+  name: coredns-5d78c9869d-thgpb.17a41e268b4a99d9
+  namespace: kube-system
+note: 'Readiness probe failed: Get "http://10.244.1.231:8181/ready": context deadline
+  exceeded (Client.Timeout exceeded while awaiting headers)'
+reason: Unhealthy
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{coredns}
+  kind: Pod
+  name: coredns-5d78c9869d-thgpb
+  namespace: kube-system
+  resourceVersion: "370648"
+  uid: 640b8735-be3e-433f-91ca-8c2f81d4bcdd
+type: Warning

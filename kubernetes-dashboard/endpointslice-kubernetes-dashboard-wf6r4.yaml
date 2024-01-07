@@ -2,7 +2,7 @@ addressType: IPv4
 apiVersion: discovery.k8s.io/v1
 endpoints:
 - addresses:
-  - 10.244.1.227
+  - 10.244.1.241
   conditions:
     ready: true
     serving: true
@@ -15,6 +15,8 @@ endpoints:
     uid: 8b04d08d-de4e-4fa6-90b3-0eb8a3b2aaae
 kind: EndpointSlice
 metadata:
+  annotations:
+    endpoints.kubernetes.io/last-change-trigger-time: "2023-11-21T12:47:22Z"
   creationTimestamp: "2023-11-21T12:47:31Z"
   generateName: kubernetes-dashboard-
   labels:

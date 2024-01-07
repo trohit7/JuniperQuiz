@@ -1,0 +1,24 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2024-01-07T07:25:34Z"
+deprecatedLastTimestamp: "2024-01-07T07:25:34Z"
+deprecatedSource:
+  component: kubelet
+  host: minikube
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-07T07:25:35Z"
+  name: example-webhook-685dd8c794-65v9f.17a7ffe2ecbf475c
+  namespace: default
+note: Started container server
+reason: Started
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{server}
+  kind: Pod
+  name: example-webhook-685dd8c794-65v9f
+  namespace: default
+  resourceVersion: "551034"
+  uid: 6037da12-a5f2-4acc-a83f-561d1df6386b
+type: Normal

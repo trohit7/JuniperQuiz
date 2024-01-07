@@ -1,0 +1,20 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2024-01-07T07:25:55Z"
+deprecatedLastTimestamp: "2024-01-07T07:25:55Z"
+deprecatedSource:
+  component: node-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-07T07:25:55Z"
+  name: minikube.17a7ffe7d050600c
+  namespace: default
+note: 'Node minikube event: Registered Node minikube in Controller'
+reason: RegisteredNode
+regarding:
+  apiVersion: v1
+  kind: Node
+  name: minikube
+  uid: 5daf7154-88fc-40a7-a306-ea507831de30
+type: Normal

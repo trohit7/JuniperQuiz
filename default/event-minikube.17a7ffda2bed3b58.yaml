@@ -1,0 +1,20 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2024-01-07T07:24:56Z"
+deprecatedLastTimestamp: "2024-01-07T07:24:56Z"
+deprecatedSource:
+  component: kubelet
+  host: minikube
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-07T07:25:32Z"
+  name: minikube.17a7ffda2bed3b58
+  namespace: default
+note: Updated Node Allocatable limit across pods
+reason: NodeAllocatableEnforced
+regarding:
+  kind: Node
+  name: minikube
+  uid: minikube
+type: Normal

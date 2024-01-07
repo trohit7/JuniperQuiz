@@ -1,0 +1,26 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 1
+deprecatedFirstTimestamp: "2024-01-07T07:25:55Z"
+deprecatedLastTimestamp: "2024-01-07T07:25:55Z"
+deprecatedSource:
+  component: endpoint-slice-controller
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-07T07:25:55Z"
+  name: nginx-service.17a7ffe7f4797e8f
+  namespace: default
+note: 'Error updating Endpoint Slices for Service default/nginx-service: failed to
+  update nginx-service-788gt EndpointSlice for Service default/nginx-service: Internal
+  error occurred: failed calling webhook "example-webhook.default.svc.cluster.local":
+  failed to call webhook: Post "https://example-webhook.default.svc:443/mutate?timeout=30s":
+  dial tcp 10.107.28.194:443: connect: connection refused'
+reason: FailedToUpdateEndpointSlices
+regarding:
+  apiVersion: v1
+  kind: Service
+  name: nginx-service
+  namespace: default
+  resourceVersion: "103336"
+  uid: 8ef4a7fd-10d1-49b4-b4b0-9d8ea8ccfc4c
+type: Warning

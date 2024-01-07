@@ -1,0 +1,24 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 2
+deprecatedFirstTimestamp: "2024-01-07T07:25:09Z"
+deprecatedLastTimestamp: "2024-01-07T07:25:19Z"
+deprecatedSource:
+  component: kubelet
+  host: minikube
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-07T07:25:34Z"
+  name: etcd-minikube.17a7ffdd1af46aff
+  namespace: kube-system
+note: 'Startup probe failed: Get "http://127.0.0.1:2381/health?serializable=false":
+  dial tcp 127.0.0.1:2381: connect: connection refused'
+reason: Unhealthy
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{etcd}
+  kind: Pod
+  name: etcd-minikube
+  namespace: kube-system
+  uid: 8af0e85a28544808d52bb7c47ad824ed
+type: Warning

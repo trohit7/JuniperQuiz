@@ -43,26 +43,26 @@ status:
     memory: 8034944Ki
     pods: "110"
   conditions:
-  - lastHeartbeatTime: "2024-01-05T11:17:45Z"
-    lastTransitionTime: "2024-01-05T10:11:20Z"
+  - lastHeartbeatTime: "2024-01-07T07:30:43Z"
+    lastTransitionTime: "2024-01-07T07:23:11Z"
     message: kubelet has sufficient memory available
     reason: KubeletHasSufficientMemory
     status: "False"
     type: MemoryPressure
-  - lastHeartbeatTime: "2024-01-05T11:17:45Z"
-    lastTransitionTime: "2024-01-05T10:11:20Z"
+  - lastHeartbeatTime: "2024-01-07T07:30:43Z"
+    lastTransitionTime: "2024-01-07T07:23:11Z"
     message: kubelet has no disk pressure
     reason: KubeletHasNoDiskPressure
     status: "False"
     type: DiskPressure
-  - lastHeartbeatTime: "2024-01-05T11:17:45Z"
-    lastTransitionTime: "2024-01-05T10:11:20Z"
+  - lastHeartbeatTime: "2024-01-07T07:30:43Z"
+    lastTransitionTime: "2024-01-07T07:23:11Z"
     message: kubelet has sufficient PID available
     reason: KubeletHasSufficientPID
     status: "False"
     type: PIDPressure
-  - lastHeartbeatTime: "2024-01-05T11:17:45Z"
-    lastTransitionTime: "2024-01-05T10:11:20Z"
+  - lastHeartbeatTime: "2024-01-07T07:30:43Z"
+    lastTransitionTime: "2024-01-07T07:23:11Z"
     message: kubelet is posting ready status
     reason: KubeletReady
     status: "True"
@@ -114,6 +114,7 @@ status:
     - nginx@sha256:86e53c4c16a6a276b204b0fd3a8143d86547c967dc8258b3d47c3a21bb68d3c6
     sizeBytes: 186779301
   - names:
+    - nginx@sha256:2bdc49f2f8ae8d8dc50ed00f2ee56d00385c6f8bc8a8b320d0a294d9e3b49026
     - nginx@sha256:bd30b8d47b230de52431cc71c5cce149b8d5d4c87c204902acf2504435d4b4c9
     - nginx:latest
     sizeBytes: 186728313

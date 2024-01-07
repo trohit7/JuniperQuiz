@@ -77,7 +77,7 @@ status:
     type: PodScheduled
   containerStatuses:
   - containerID: docker://0d22b1c87b10d9c78cae7640e44529434c8101913d16739c9b6763c695de988b
-    image: nginx:latest
+    image: nginx@sha256:10d1f5b58f74683ad34eb29287e07dab1e90f10af243f151bb50aa5dbb4d62ee
     imageID: docker-pullable://nginx@sha256:10d1f5b58f74683ad34eb29287e07dab1e90f10af243f151bb50aa5dbb4d62ee
     lastState: {}
     name: nginx

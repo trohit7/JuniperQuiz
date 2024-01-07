@@ -1,0 +1,24 @@
+apiVersion: events.k8s.io/v1
+deprecatedCount: 3
+deprecatedFirstTimestamp: "2024-01-07T07:25:32Z"
+deprecatedLastTimestamp: "2024-01-07T07:30:58Z"
+deprecatedSource:
+  component: kubelet
+  host: minikube
+eventTime: null
+kind: Event
+metadata:
+  creationTimestamp: "2024-01-07T07:25:35Z"
+  name: crdstesting-controller-manager-595f599f59-8xm25.17a7ffe287379250
+  namespace: crdstesting-system
+note: Created container manager
+reason: Created
+regarding:
+  apiVersion: v1
+  fieldPath: spec.containers{manager}
+  kind: Pod
+  name: crdstesting-controller-manager-595f599f59-8xm25
+  namespace: crdstesting-system
+  resourceVersion: "551065"
+  uid: 116ed313-6135-4d65-80db-764194f2e9ac
+type: Normal
